@@ -36,8 +36,15 @@
 
 # تهيئة_المشروع
 - عند تنزيل المشروع على جهازك -clone- يجب عليك الذهاب إلى مسار Aqarati-app ومن ثم تنفيذ الأوامر التالية لتستطيع العمل على المشروع.
+  
   ```
-  cd Aqarati-app 
+  cd Aqarati-app
+  npm install
+  npm install -D tailwindcss postcss autoprefixer
+  npx tailwindcss init -p
+  npm i react-router-dom
+  npm install axios
+  npm i -D daisyui@latest
   ```
 
 # ملف_Figma 
