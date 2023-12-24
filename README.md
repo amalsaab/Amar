@@ -3,6 +3,7 @@
   - [المستأجر](#المستأجر)
   - [المالك](#المالك)
   - [المشرف](#المشرف)
+- [تهيئة المشروع](#تهيئة_المشروع)
 - [ملف figma](#ملف_Figma)
 
 
@@ -32,6 +33,22 @@
 ## المشرف
   - عرض طلبات العقار المملوكة
   - عرض جميع ملاك العقار
+
+# تهيئة_المشروع
+- عند تنزيل المشروع على جهازك -clone- يجب عليك الذهاب إلى مسار Aqarati-app ومن ثم تنفيذ الأوامر التالية لتستطيع العمل على المشروع.
+  
+  ```
+  cd Aqarati-app
+  npm install
+  npm install -D tailwindcss postcss autoprefixer
+  npx tailwindcss init -p
+  npm i react-router-dom
+  npm install axios
+  npm i -D daisyui@latest
+  ```
+
+  - https://tailwindcss.com/docs/guides/vite
+  - https://daisyui.com/
 
 # ملف_Figma 
 - الرابط: https://www.figma.com/file/WeNImQ4wTS6Zwgfh8vl2x6/Untitled?type=design&node-id=0%3A1&mode=design&t=mGMHEtR51ik0iYO0-1
