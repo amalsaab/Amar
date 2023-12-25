@@ -2,6 +2,8 @@ import React from 'react'
 import './Landing.css'
 import { useState, useEffect } from 'react';
 import bg1 from './bg1.png'
+import line from './line.png'
+
 function Landing() {
 
     const [activeSlide, setActiveSlide] = useState(1);
@@ -16,7 +18,24 @@ function Landing() {
       return () => clearInterval(intervalId);
     }, []);
 
-
+const changetoM1 = ()=>{
+    let title = document.getElementById("title")
+    let description = document.getElementById("description")
+    title.innerText =" المستأجر"
+    description.innerText = " يعزز (اسم الموقع) للمستأجرين تجربة الإيجار بتوفير إمكانية الدفع الإلكتروني ومشاهدة مواعيد الدفعات. كما يُيسّر طلب الصيانة، ويوفر معلومات شاملة حول العقار."
+}
+const changetoM2 = ()=>{
+    let title = document.getElementById("title")
+    let description = document.getElementById("description")
+    title.innerText =" مالك العقار"
+    description.innerText = " تشمل تتبع الدفعات، وإدارة الصيانة، وتوفير تقارير شاملة، مما يسهم في تحقيق أداء متميز وفعالية أعلى في إدارة العقارات."
+}
+const changetoM3 = ()=>{
+    let title = document.getElementById("title")
+    let description = document.getElementById("description")
+    title.innerText =" مكاتب العقار"
+    description.innerText = " بمهنية عالية وخبرة واسعة في سوق العقارات، نقدم في مكتبنا خدمات فعّالة لمساعدة عملائنا في البحث عن أماكن إقامة مثالية، ونقدم استشارات شاملة لمالكي العقارات لتحسين وتسويق ممتلكاتهم بكفاءة."
+}
 
   return (
     <div>
@@ -84,10 +103,31 @@ function Landing() {
         </div>
 
 
-        <div className='flex items-center justify-center w-[100vw] h-[50vh]'>
+        <div className='flex items-center justify-center w-[100vw] h-[50vh] flex-col'>
 
-           
+            <div className='flex items-center'>
+
+                <p id='description' className='w-[40vw] text-right text-[1.7rem]'>يعزز (اسم الموقع) للمستأجرين تجربة الإيجار بتوفير إمكانية الدفع الإلكتروني ومشاهدة مواعيد الدفعات. كما يُيسّر طلب الصيانة، ويوفر معلومات شاملة حول العقار. </p>
+                <img src={line} width={100} alt="" />
+                <h1 id='title' className='text-[3rem]'>المستأجر</h1>
+
+
+            </div>
+
+            <div className='pt-10 flex gap-10'>
+                <button  onClick={changetoM1} className="btn btn-sm"> المستأجر</button>
+                <button onClick={changetoM2} className="btn btn-sm">مالك العقار</button>
+                <button  onClick={changetoM3} className="btn btn-sm">مكاتب العقار</button>
+            </div>
         </div>
+    </div>
+
+    {/* Description ends */}
+
+
+    {/* Journy start */}
+
+    <div className='w-[100vw] h-[100vh] bg-[#F6F6F6]'>
 
     </div>
 
