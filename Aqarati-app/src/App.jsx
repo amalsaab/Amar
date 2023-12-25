@@ -1,4 +1,5 @@
 import './App.css'
+import Landing from './Compnent/Landing'
 import { Routes, Route } from 'react-router-dom'
 function App() {
   return (
@@ -6,7 +7,7 @@ function App() {
       
 
       <Routes>
-        <Route path="/" element={<div className='text-3xl text-primary'>Home</div>} />
+        <Route path="/" element={<Landing/>}/>
       </Routes>
 
       
