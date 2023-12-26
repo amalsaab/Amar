@@ -19,7 +19,7 @@ export default function Signup() {
 
 <div class="h-screen md:flex">
 	<div style={{backgroundImage: `url(${bgsignup})`}}
-		class="relative overflow-hidden md:flex bg-cover w-1/2 i justify-around items-center hidden">
+		class="relative overflow-hidden md:flex bg-co w-1/2 i justify-around items-center hidden">
 		
 		<div class="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
 		<div class="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>

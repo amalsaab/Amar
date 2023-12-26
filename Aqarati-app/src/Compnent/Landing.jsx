@@ -109,7 +109,7 @@ const changetoM3 = ()=>{
           </h1>
         </div>
       </div>
-      <div className="flex justify-end w-full py-2 gap-2 absolute items-end h-[85vh] pr-10 ">
+      <div className="flex justify-start w-full py-2 gap-2 absolute items-end h-[85vh] pr-10 ">
   <a href="#slide1" className="btn btn-sm"></a> 
   <a href="#slide2" className="btn btn-sm"></a> 
   <a href="#slide3" className="btn btn-sm"></a> 
@@ -126,26 +126,25 @@ const changetoM3 = ()=>{
         </div>
 
 
-        <div className='flex items-center justify-center w-[100vw] h-[50vh] flex-col'>
+        <div className='flex items-center justify-center w-[100vw] h-[20vh] flex-col'>
 
             <div className='flex items-center'>
-
-                <p id='description' className='w-[40vw] text-right text-[1.7rem]'>يعزز (اسم الموقع) للمستأجرين تجربة الإيجار بتوفير إمكانية الدفع الإلكتروني ومشاهدة مواعيد الدفعات. كما يُيسّر طلب الصيانة، ويوفر معلومات شاملة حول العقار. </p>
-                <img src={line} width={100} alt="" />
                 <h1 id='title' className='text-[3rem]'>المستأجر</h1>
-
-
+                <img src={line} width={100} alt="" />
+                <p id='description' className='w-[40vw] text-right text-[1.7rem]'>يعزز (اسم الموقع) للمستأجرين تجربة الإيجار بتوفير إمكانية الدفع الإلكتروني ومشاهدة مواعيد الدفعات. كما يُيسّر طلب الصيانة، ويوفر معلومات شاملة حول العقار. </p>
+      
             </div>
 
-            <div className='pt-10 flex gap-10 '>
+
+          
+            </div>
+            <div className='pt-20 flex gap-10 w-[100vw]  justify-center '>
                 <div className='bg-[#D9D9D9] flex gap-10 rounded-full w-[13vw] h-[5vh] justify-center  items-center  '>
                 <button id='m1'   onClick={changetoM1} className="btn btn-sm bg-[#BBA98D] w-[2vw] rounded-full"> </button>
                 <button id='m2'  onClick={changetoM2} className="btn btn-sm bg-[#CAC8C8]  w-[2vw] rounded-full"> </button>
                 <button id='m3'  onClick={changetoM3} className="btn btn-sm bg-[#CAC8C8] w-[2vw] rounded-full "> </button>
 
                 </div>
-          
-            </div>
         </div>
     </div>
 
@@ -154,15 +153,15 @@ const changetoM3 = ()=>{
 
     {/* Journy start */}
 
-<div className='w-[100vw] h-[100vh] bg-[#F6F6F6]'>
+<div className=' h-[100vh] bg-[#F6F6F6]'>
 
-<div className='flex w-[100vw] h-[10vh] items-end justify-center '>
+<div className='flex  items-end justify-center '>
 
     <h1 className='text-[3rem]'>رحلتك في عقارك</h1>
 
 </div>
 
-    <div className='flex flex w-[100vw] h-[10vh] items-end justify-center '>
+    <div className='flex w-[100vw] h-[10vh] items-end justify-center '>
         <div className="join ">
             <input className="join-item btn btn-square w-[7vw] bg-white" type="radio" name="options" aria-label="الوسيط العقاري"  />
             <input className="join-item btn btn-square w-[7vw]  bg-white" type="radio" name="options" aria-label="مالك العقار" />
@@ -175,40 +174,52 @@ const changetoM3 = ()=>{
 
    
 
-    <div className='flex  w-[90vw] items-end justify-end'>
-        <div className='text-right flex flex-col gap-10'>
+    <div className='flex items-end justify-end'>
+        <div className='w-[90vw] flex flex-col gap-10 items-start justify-center '>
 
+        <div className='flex justify-end items-center  '>  
+            <img width={300} src={step1} alt="" />
             <div className='w-[30vw]'>
-                <h1>Header</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorem illum pariatur doloremque laudantium unde nostrum fugit corrupti animi accusantium, dolor ad quas a labore debitis nisi praesentium ea odit!</p>
+                
+                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
+                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
+            </div>
+        </div>
+
+
+            <div className='flex justify-center items-center'>
+            <img width={300} src={step2} alt="" />
+            <div className='w-[30vw]'>
+                
+                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
+                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
+            </div>
             </div>
 
+            <div className='flex justify-center items-center'>
+            <img width={300} src={step3} alt="" />
             <div className='w-[30vw]'>
-                <h1>Header</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorem illum pariatur doloremque laudantium unde nostrum fugit corrupti animi accusantium, dolor ad quas a labore debitis nisi praesentium ea odit!</p>
+                
+                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
+                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
+            </div>
             </div>
 
+            <div className='flex justify-center items-center'>
+            <img width={300} src={step4} alt="" />
             <div className='w-[30vw]'>
-                <h1>Header</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorem illum pariatur doloremque laudantium unde nostrum fugit corrupti animi accusantium, dolor ad quas a labore debitis nisi praesentium ea odit!</p>
+                
+                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
+                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
             </div>
-
-            <div className='w-[30vw]'>
-                <h1>Header</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorem illum pariatur doloremque laudantium unde nostrum fugit corrupti animi accusantium, dolor ad quas a labore debitis nisi praesentium ea odit!</p>
             </div>
+            
 
 
 
        </div>
 
-    <div className='flex flex-col '>
-    <img width={300} src={step1} alt="" />
-    <img width={300} src={step2} alt="" />
-    <img width={300} src={step3} alt="" />
-    <img width={300} src={step4} alt="" />
-
-    </div>
+  
  
     </div>
 
