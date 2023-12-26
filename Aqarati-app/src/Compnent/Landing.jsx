@@ -109,7 +109,7 @@ const changetoM3 = ()=>{
           </h1>
         </div>
       </div>
-      <div className="flex justify-end w-full py-2 gap-2 absolute items-end h-[85vh] pr-10 ">
+      <div className="flex justify-start w-full py-2 gap-2 absolute items-end h-[85vh] pr-10 ">
   <a href="#slide1" className="btn btn-sm"></a> 
   <a href="#slide2" className="btn btn-sm"></a> 
   <a href="#slide3" className="btn btn-sm"></a> 
@@ -129,12 +129,10 @@ const changetoM3 = ()=>{
         <div className='flex items-center justify-center w-[100vw] h-[20vh] flex-col'>
 
             <div className='flex items-center'>
-
-                <p id='description' className='w-[40vw] text-right text-[1.7rem]'>يعزز (اسم الموقع) للمستأجرين تجربة الإيجار بتوفير إمكانية الدفع الإلكتروني ومشاهدة مواعيد الدفعات. كما يُيسّر طلب الصيانة، ويوفر معلومات شاملة حول العقار. </p>
-                <img src={line} width={100} alt="" />
                 <h1 id='title' className='text-[3rem]'>المستأجر</h1>
-
-
+                <img src={line} width={100} alt="" />
+                <p id='description' className='w-[40vw] text-right text-[1.7rem]'>يعزز (اسم الموقع) للمستأجرين تجربة الإيجار بتوفير إمكانية الدفع الإلكتروني ومشاهدة مواعيد الدفعات. كما يُيسّر طلب الصيانة، ويوفر معلومات شاملة حول العقار. </p>
+      
             </div>
 
 
@@ -155,9 +153,9 @@ const changetoM3 = ()=>{
 
     {/* Journy start */}
 
-<div className='w-[100vw] h-[100vh] bg-[#F6F6F6]'>
+<div className=' h-[100vh] bg-[#F6F6F6]'>
 
-<div className='flex w-[100vw] h-[10vh] items-end justify-center '>
+<div className='flex  items-end justify-center '>
 
     <h1 className='text-[3rem]'>رحلتك في عقارك</h1>
 
@@ -176,40 +174,52 @@ const changetoM3 = ()=>{
 
    
 
-    <div className='flex  w-[90vw] items-end justify-end'>
-        <div className='text-right flex flex-col  gap-20 h-[52vh]'>
+    <div className='flex items-end justify-end'>
+        <div className='w-[90vw] flex flex-col gap-10 items-start justify-center '>
 
-            <div className='w-[30vw] flex flex-col '>
-                <h1 className='font-bold text-[2rem]'>تسجيل حساب جديد</h1>
-                <p>تسجيل حساب جديد من صفحة تسجيل الدخول وادخال البيانات والتأكد من صحتها</p>
-            </div>
-
+        <div className='flex justify-end items-center  '>  
+            <img width={300} src={step1} alt="" />
             <div className='w-[30vw]'>
-                <h1 className='font-bold text-[2rem]'>انتظار اسناد مالك العقار للمستأجر</h1>
-                <p>اعلم مالك العقار ان حسابك جاهز لاسناد شقة </p>
-            </div>
-
-            <div className='w-[30vw]'>
-                <h1 className='font-bold text-[2rem]'>ادارة الشقة ورفع الطلبات</h1>
-                <p>تستطيع الان ادارة الشقق المستأجرة ورفع طلبات اصلاح وتحسين للمالك مباشرة</p>
-            </div>
-
-            <div className='w-[30vw]'>
+                
                 <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
                 <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
             </div>
+        </div>
+
+
+            <div className='flex justify-center items-center'>
+            <img width={300} src={step2} alt="" />
+            <div className='w-[30vw]'>
+                
+                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
+                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
+            </div>
+            </div>
+
+            <div className='flex justify-center items-center'>
+            <img width={300} src={step3} alt="" />
+            <div className='w-[30vw]'>
+                
+                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
+                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
+            </div>
+            </div>
+
+            <div className='flex justify-center items-center'>
+            <img width={300} src={step4} alt="" />
+            <div className='w-[30vw]'>
+                
+                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
+                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
+            </div>
+            </div>
+            
 
 
 
        </div>
 
-    <div className='flex flex-col  '>
-    <img width={300} src={step1} alt="" />
-    <img width={300} src={step2} alt="" />
-    <img width={300} src={step3} alt="" />
-    <img width={300} src={step4} alt="" />
-
-    </div>
+  
  
     </div>
 
