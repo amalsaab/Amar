@@ -176,33 +176,33 @@ const changetoM3 = ()=>{
    
 
     <div className='flex  w-[90vw] items-end justify-end'>
-        <div className='text-right flex flex-col gap-10'>
+        <div className='text-right flex flex-col  gap-20 h-[52vh]'>
 
-            <div className='w-[30vw]'>
-                <h1>Header</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorem illum pariatur doloremque laudantium unde nostrum fugit corrupti animi accusantium, dolor ad quas a labore debitis nisi praesentium ea odit!</p>
+            <div className='w-[30vw] flex flex-col '>
+                <h1 className='font-bold text-[2rem]'>تسجيل حساب جديد</h1>
+                <p>تسجيل حساب جديد من صفحة تسجيل الدخول وادخال البيانات والتأكد من صحتها</p>
             </div>
 
             <div className='w-[30vw]'>
-                <h1>Header</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorem illum pariatur doloremque laudantium unde nostrum fugit corrupti animi accusantium, dolor ad quas a labore debitis nisi praesentium ea odit!</p>
+                <h1 className='font-bold text-[2rem]'>انتظار اسناد مالك العقار للمستأجر</h1>
+                <p>اعلم مالك العقار ان حسابك جاهز لاسناد شقة </p>
             </div>
 
             <div className='w-[30vw]'>
-                <h1>Header</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorem illum pariatur doloremque laudantium unde nostrum fugit corrupti animi accusantium, dolor ad quas a labore debitis nisi praesentium ea odit!</p>
+                <h1 className='font-bold text-[2rem]'>ادارة الشقة ورفع الطلبات</h1>
+                <p>تستطيع الان ادارة الشقق المستأجرة ورفع طلبات اصلاح وتحسين للمالك مباشرة</p>
             </div>
 
             <div className='w-[30vw]'>
-                <h1>Header</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorem illum pariatur doloremque laudantium unde nostrum fugit corrupti animi accusantium, dolor ad quas a labore debitis nisi praesentium ea odit!</p>
+                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
+                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
             </div>
 
 
 
        </div>
 
-    <div className='flex flex-col '>
+    <div className='flex flex-col  '>
     <img width={300} src={step1} alt="" />
     <img width={300} src={step2} alt="" />
     <img width={300} src={step3} alt="" />
