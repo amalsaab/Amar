@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Navbar from './navigation/Navbar'
+import Footer from './navigation/Footer'
 function Qu() {
   return (
     <div>

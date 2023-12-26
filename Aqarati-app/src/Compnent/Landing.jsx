@@ -1,16 +1,15 @@
 import React from 'react'
-import './Landing.css'
 import { useState, useEffect, useRef } from 'react';
-import bg1 from './bg1.png'
-import line from './line.png'
-import step1 from './step1.png'
-import step2 from './step2.png'
-import step3 from './step3.png'
-import step4 from './step4.png'
-import Qimg from './Qimg.png'
+import bg1 from '../assets/bg1.png'
+import line from '../assets/line.png'
+import step1 from '../assets/step1.png'
+import step2 from '../assets/step2.png'
+import step3 from '../assets/step3.png'
+import step4 from '../assets/step4.png'
+import Qimg from '../assets/Qimg.png'
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Navbar from './navigation/Navbar';
+import Footer from './navigation/Footer';
 
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Aqar from './aqar.png'
+import Aqar from '../../assets/aqar.png'
 
 function Testing() {
   return (
