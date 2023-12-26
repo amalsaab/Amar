@@ -161,7 +161,7 @@ const changetoM3 = ()=>{
 
 </div>
 
-    <div className='flex flex w-[100vw] h-[10vh] items-end justify-center '>
+    <div className='flex w-[100vw] h-[10vh] items-end justify-center '>
         <div className="join ">
             <input className="join-item btn btn-square w-[7vw] bg-white" type="radio" name="options" aria-label="الوسيط العقاري"  />
             <input className="join-item btn btn-square w-[7vw]  bg-white" type="radio" name="options" aria-label="مالك العقار" />
