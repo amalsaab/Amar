@@ -126,7 +126,7 @@ const changetoM3 = ()=>{
         </div>
 
 
-        <div className='flex items-center justify-center w-[100vw] h-[50vh] flex-col'>
+        <div className='flex items-center justify-center w-[100vw] h-[20vh] flex-col'>
 
             <div className='flex items-center'>
 
@@ -137,15 +137,16 @@ const changetoM3 = ()=>{
 
             </div>
 
-            <div className='pt-10 flex gap-10 '>
+
+          
+            </div>
+            <div className='pt-20 flex gap-10 w-[100vw]  justify-center '>
                 <div className='bg-[#D9D9D9] flex gap-10 rounded-full w-[13vw] h-[5vh] justify-center  items-center  '>
                 <button id='m1'   onClick={changetoM1} className="btn btn-sm bg-[#BBA98D] w-[2vw] rounded-full"> </button>
                 <button id='m2'  onClick={changetoM2} className="btn btn-sm bg-[#CAC8C8]  w-[2vw] rounded-full"> </button>
                 <button id='m3'  onClick={changetoM3} className="btn btn-sm bg-[#CAC8C8] w-[2vw] rounded-full "> </button>
 
                 </div>
-          
-            </div>
         </div>
     </div>
 
