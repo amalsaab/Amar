@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function Testing(props) {
   return (
-    <div className='flex h-[100vh] w-full items-center justify-center '>
+    <div className='flex   items-center justify-center '>
         
         <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-xl bg-clip-border rounded-xl w-96 outline outline-[#BBA98D] ">
    
