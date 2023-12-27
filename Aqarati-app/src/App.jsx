@@ -7,6 +7,8 @@ import Card from  '../src/Compnent/sataDisplay/Card'
 import Owner from '../src/Pages/Owner'
 import OwnerApartment from '../src/Pages/OwnerApartment'
 import BottomNavigation from './Compnent/navigation/BottomNavigation'
+import Login from './Pages/Login'
+import HistoryOwner from './Pages/HistoryOwner'
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
         <Route path="/Q" element={<Qu/>}/>
         <Route path="/Test" element={<Owner/>}/>
         <Route path="/Apartment" element={<OwnerApartment/>}/>
+        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/historyOwner" element={<HistoryOwner/>}/>
 
 
 
