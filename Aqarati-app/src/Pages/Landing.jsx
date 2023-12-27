@@ -8,8 +8,8 @@ import step3 from '../assets/step3.png'
 import step4 from '../assets/step4.png'
 import Qimg from '../assets/Qimg.png'
 import { Link } from 'react-router-dom';
-import Navbar from './navigation/Navbar';
-import Footer from './navigation/Footer';
+import Navbar from '../Compnent/navigation/Navbar';
+import Footer from '../Compnent/navigation/Footer';
 
 
 

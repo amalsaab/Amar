@@ -1,9 +1,11 @@
 import './App.css'
-import Landing from './Compnent/Landing'
+import Landing from '../src/Pages/Landing'
 import { Routes, Route } from 'react-router-dom'
-import Qu from './Compnent/Qu'
-import Signup from './Compnent/Signup'
-import Card from  './Compnent/sataDisplay/Card'
+import Qu from '../src/Pages/Qu'
+import Signup from '../src/Pages/Signup'
+import Card from  '../src/Compnent/sataDisplay/Card'
+import Owner from '../src/Pages/Owner'
+import OwnerApartment from '../src/Pages/OwnerApartment'
 import BottomNavigation from './Compnent/navigation/BottomNavigation'
 
 function App() {
@@ -17,7 +19,9 @@ function App() {
     
         <Route path="/" element={<Landing/>}/>
         <Route path="/Q" element={<Qu/>}/>
-        <Route path="/Test" element={<Card/>}/>
+        <Route path="/Test" element={<Owner/>}/>
+        <Route path="/Apartment" element={<OwnerApartment/>}/>
+
 
 
       </Routes>
