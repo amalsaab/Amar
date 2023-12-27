@@ -1,25 +1,40 @@
 import React from 'react'
 import Card from  '../../src/Compnent/sataDisplay/Card'
+import Aqar from '../.../../assets/aqar.png'
 
 function Owner() {
   return (
     <div>
         <div >
-     <div className="drawer lg:drawer-open">
+     <div className="drawer lg:drawer-open ">
             
-  <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+  <input id="my-drawer-2" type="checkbox" className="drawer-toggle " />
   
-  <div className="drawer-content items-center justify-center DashboredBG ">
+  <div className="drawer-content items-center justify-center DashboredBG  ">
     {/* Page content here */}
 
-    <div className='flex'>
-
     
+    <div className='flex w-full h-18  items-center justify-center   '>
+    <div className='bg-white outline outline-[#BBA98D] flex justify-center items-center m-10 rounded-md  p-4 '>
+
+        <div className='flex gap-5'>
+            <button className='btn bg-[#BBA98D] outline-white w-23'>اضافة عقار</button>
+            <button className='btn bg-[#BBA98D] outline-white w-23'>اضافة شقة</button>
+            <button className='btn bg-[#BBA98D] outline-white w-23'>اسناد مستأجر</button>
+            <button className='btn bg-[#BBA98D] outline-white w-23'>اضافة صيانة</button>
+        </div>
+
+    </div>
+
+{/* Here is the head of the the Aqar */}
+
+    </div>
+
+    <div className='flex  '>
     <Card Head="شقق المتكاملة" Location="الرياض، حي الوادي" Age="10 سنوات" NumberofUnit="20"/>
     <Card Head="شقق الكمال" Location="الرياض، حي العليا" Age="3 سنوات" NumberofUnit="32"/>
     <Card Head="شقق ركن الانوار" Location="الرياض، حي الملقا" Age="سنتين" NumberofUnit="2"/>
     <Card Head="شقق خير النزل" Location="الرياض، حي الشفاء" Age="سنة" NumberofUnit="0"/>
-
     </div>
 
 
