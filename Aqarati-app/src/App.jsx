@@ -8,8 +8,9 @@ import Owner from '../src/Pages/Owner'
 import OwnerApartment from '../src/Pages/OwnerApartment'
 import BottomNavigation from './Compnent/navigation/BottomNavigation'
 import Login from './Pages/Login'
-import HistoryOwner from './Pages/HistoryOwner'
-
+import ApartmentHistory from './Pages/ApartmentHistory'
+import MaintenanceRequest from './Pages/MaintenanceRequest'
+import RentPayments from './Pages/RentPayments'
 function App() {
   return (
     <div>
@@ -20,12 +21,15 @@ function App() {
         { /* For component testing */}
     
         <Route path="/" element={<Landing/>}/>
+
         <Route path="/Q" element={<Qu/>}/>
         <Route path="/Owner" element={<Owner/>}/>
         <Route path="/Apartment" element={<OwnerApartment/>}/>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/historyOwner" element={<HistoryOwner/>}/>
+        <Route path="/historyOwner" element={<ApartmentHistory/>}/>
+        <Route path="/MaintenanceRequest" element={<MaintenanceRequest/>}/>
+        <Route path="/RentPayments" element={<RentPayments/>}/>
 
 
 

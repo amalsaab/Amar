@@ -1,48 +1,100 @@
 import React from 'react'
-import Card from  '../../src/Compnent/sataDisplay/Card'
+import { Link } from 'react-router-dom'
 import Aqar from '../.../../assets/aqar.png'
-
-function Owner() {
+export default function RentPayments() {
   return (
-    <div>
-        <div >
-     <div className="drawer lg:drawer-open  ">
+<>
+
+
+
+<div >
+     <div className="drawer lg:drawer-open">
             
-  <input id="my-drawer-2" type="checkbox" className="drawer-toggle " />
+  <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
   
-  <div className="drawer-content items-center justify-center DashboredBG   ">
-    {/* Page content here */}
+  <div className="drawer-content items-center justify-center DashboredBG ">
+    {/* content here */}
 
-    <div className='flex w-full  items-center justify-center  '>
-    <div className='bg-white outline outline-[#BBA98D] flex justify-center items-center m-10 rounded-md  p-4 '>
-
-        <div className='flex gap-4'>
-            <button className='btn bg-[#BBA98D] outline-white w-23'>اضافة عقار</button>
-            <button className='btn bg-[#BBA98D] outline-white w-23'>اضافة شقة</button>
-            <button className='btn bg-[#BBA98D] outline-white w-23'>اسناد مستأجر</button>
-            <button className='btn bg-[#BBA98D] outline-white w-23'>اضافة صيانة</button>
+    <div className='flex w-full h-18  items-center justify-center '>
+    <div className='bg-white outline outline-[#BBA98D] flex justify-between items-center m-10 rounded-md w-full p-4'>
+        
+        <div className='flex flex-col' >
+            <h1 className='text-[2rem] font-bold  '>شقق المتكاملة</h1>
+            <h1>الرياض ، حي الوادي</h1>
+        </div>
+        <div >
+            <img width={150} src={Aqar} alt="" srcset="" />
         </div>
 
     </div>
+
+
+    </div>
+
+    <div className='flex w-full h-18  items-center justify-center '>
+    <div className='bg-white outline outline-[#BBA98D] flex justify-between items-center m-10 rounded-md w-full p-4'>
+        
+        <div className='flex flex-col' >
+            <h1 className='text-[2rem] font-bold  '>شقة رقم 1 </h1>
+            <h1>اسم المستأجر : محمد الشمري</h1>
+        </div>
+        <div >
+            <img width={150} src={Aqar} alt="" srcset="" />
+        </div>
+
     </div>
 
 
-
-    <div className=' flex gap-10 p-4 flex-wrap '>
-
-    <Card Head="شقق المتكاملة" Location="الرياض، حي الوادي" Age="10 سنوات" NumberofUnit="20"/>
-    <Card Head="شقق الكمال" Location="الرياض، حي العليا" Age="3 سنوات" NumberofUnit="32"/>
-    <Card Head="شقق ركن الانوار" Location="الرياض، حي الملقا" Age="سنتين" NumberofUnit="2"/>
-    <Card Head="شقق خير النزل" Location="الرياض، حي الشفاء" Age="سنة" NumberofUnit="0"/>
     </div>
+    
+    <div className='bg-white outline outline-[#BBA98D] flex flex-col justify-between items-center m-10 rounded-md p-4'>
+  <h1 className='text-lg bg-'>سجل الدفعات</h1>
+  <div className='flex gap-20'>
+    <h1 >القيمة الَّسنوية للإيجار: 30000 ريال</h1>
+    <h1 >دورة سداد الايجار: نصف سنوي</h1>
+  </div>
 
-
+    <div dir='rtl' className="overflow-x-auto w-full">
+  <table className="table">
+    {/* head */}
+    <thead>
+      <tr>
+       
+        <th>رقم الدفعة</th>
+        <th>تاريخ الدفعة</th>
+        <th>اجمالي القيمة</th>
+        <th>المدفوع</th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      <tr>
+        <th>1</th> 
+        <td>15000 ريال</td>
+        <td>1-6-2023</td>
+        <td>تم الدفع</td>
+      </tr>
+      {/* row 2 */}
+      <tr>
+        <th>2</th>
+        <td>15000 ريال</td>
+        <td>1-12-2023</td>
+        <td>لم يتم الدفع</td>
+      </tr>
+      {/* row 3 */}
+      
+    </tbody>
+  </table>
+</div>
+</div>
     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open</label>
   
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
+    
     <ul className="menu  w-80 min-h-full bg-white text-base-content text-[1.3rem] justify-between">
+    
       {/* Sidebar content here */}
         <div>
         <h1>Logo</h1>
@@ -101,9 +153,12 @@ function Owner() {
 الدعم الفني
     </button>
 
+<Link to='/'>
 <button className='bg-[#BE6363] w-72 h-12 rounded-md text-white'>
     تسجيل الخروج
 </button>
+</Link>
+
 
 </div>
      
@@ -113,8 +168,8 @@ function Owner() {
   </div>
 </div>
         </div>
-    </div>
-  )
-}
 
-export default Owner
+
+</>
+    )
+}

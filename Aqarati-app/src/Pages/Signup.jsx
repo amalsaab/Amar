@@ -20,8 +20,7 @@ export default function Signup() {
 <div class="h-screen md:flex  ">
 
 	<div  class="flex md:w-1/2 justify-center py-10 items-center bg-white ">
-		<div class="bg-white 
-        ">
+		<div class="bg-black ">
 			<h1 class="text-gray-800 font-bold text-2xl mb-4">تسجيل جديد</h1>
             <div className=' flex gap-5 justify-end rounded-lg mb-4'><button class="text-sm font-normal text-black bg-primary rounded-lg p-1">مالك عقار</button>
             <button class="text-sm font-normal text-gray-600 ">مستأجر</button></div>
