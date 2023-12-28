@@ -26,7 +26,9 @@ function Navbar() {
 
 </div>
 <div className='w-[10vw]'>
-    <button className='w-[8vw] rounded-sm bg-[#ffff] outline outline-[#BBA98D] text-black'>تسجيل الدخول</button>
+  <Link to='/signup'>
+  <button className='w-[8vw] rounded-sm bg-[#ffff] outline outline-[#BBA98D] text-black'>تسجيل جديد</button>
+  </Link>
 </div>
 </div>
     </div>

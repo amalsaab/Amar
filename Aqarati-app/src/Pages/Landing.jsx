@@ -8,12 +8,63 @@ import step3 from '../assets/step3.png'
 import step4 from '../assets/step4.png'
 import Qimg from '../assets/Qimg.png'
 import { Link } from 'react-router-dom';
-import Navbar from './navigation/Navbar';
-import Footer from './navigation/Footer';
+import Navbar from '../Compnent/navigation/Navbar';
+import Footer from '../Compnent/navigation/Footer';
 
 
 
 function Landing() {
+
+  const [step1state, updatestep1] = useState("تسجيل حساب جديد")
+  const [step1para, updatestep1para] = useState("سجل حساب جديد مع التأكد من المعلومات المدخله بشكل صحيح")
+  const [step2state, updatestep2] = useState("اعلام مالك العقار")
+  const [step2para, updatestep2para] = useState("اعلم مالك العقار المستأجر بان لديك حساب فعال في المنصة")
+  const [step3state, updatestep3] = useState("ادارة العقار المستأجر")
+  const [step3para, updatestep3para] = useState("يمكنك الان ادارة ورؤية السجل السابق للعقار المستأجر ")
+  const [step4state, updatestep4] = useState("الدفع الالكتروني")
+  const [step4para, updatestep4para] = useState("يمكنك الان الدفع عن طريق المنصه باكثر من طريقة دفع ورؤية كل من الدفعات السابقه والقدمه")
+
+  const RenterClicked = ()=>{
+    updatestep1("تسجيل حساب جديد")
+    updatestep1para("سجل حساب جديد مع التأكد من المعلومات المدخله بشكل صحيح")
+    updatestep2("اعلام مالك العقار")
+    updatestep2para("اعلم مالك العقار المستأجر بان لديك حساب فعال في المنصة")
+
+    updatestep3("ادارة العقار المستأجر")
+    updatestep3para("يمكنك الان ادارة ورؤية السجل السابق للعقار المستأجر ")
+
+    updatestep4("الدفع الالكتروني")
+    updatestep4para("يمكنك الان الدفع عن طريق المنصه باكثر من طريقة دفع ورؤية كل من الدفعات السابقه والقدمه")
+
+  }
+
+  const  ownerClicked = ()=>{
+    updatestep1("تسجيل حساب جديد")
+    updatestep2("رفع العقار الخاص بك")
+    updatestep3("ادارة العقار ")
+    updatestep4(" رفع الحساب البنكي ")
+
+    updatestep1para("تسجيل حساب جديد مع اختيار نوع الحساب والتاكد من البيانات المدخله")
+    updatestep2para("رفع بيانات العقار الخاص بك وانتظار موافقه المشرفين")
+    updatestep3para("ادارة العقارات الخاصه بك مع امكانيه اسناد مستأجر لكل عقار واضافة صيانه ")
+    updatestep4para("رفع الحساب البنكي ليتم تحويل مبالغ الدفع بكل دوري")
+
+
+  }
+
+  const DealerCliked = ()=>{
+    updatestep1("تسجيل حساب جديد")
+    updatestep2("رفع العقار ")
+    updatestep3("ادارة العقار ")
+    updatestep4(" رفع الحساب البنكي ")
+
+
+    updatestep1para("تسجيل حساب جديد مع اختيار نوع الحساب والتاكد من البيانات المدخله")
+    updatestep2para("رفع بيانات العقار وانتظار موافقه المشرفين")
+    updatestep3para("ادارة العقارات الخاصه بك مع امكانيه اسناد مستأجر لكل عقار واضافة صيانه ")
+    updatestep4para("رفع الحساب البنكي ليتم تحويل مبالغ الدفع بكل دوري")
+
+  }
 
     const [activeSlide, setActiveSlide] = useState(1);
 
@@ -65,7 +116,7 @@ const changetoM3 = ()=>{
     let m1 = document.getElementById("m1")
     let m2 = document.getElementById("m2")
     let m3 = document.getElementById("m3")
-    title.innerText =" مكاتب العقار"
+    title.innerText =" وسيط العقار"
     description.innerText = " بمهنية عالية وخبرة واسعة في سوق العقارات، نقدم في مكتبنا خدمات فعّالة لمساعدة عملائنا في البحث عن أماكن إقامة مثالية، ونقدم استشارات شاملة لمالكي العقارات لتحسين وتسويق ممتلكاتهم بكفاءة."
 
 
@@ -162,9 +213,15 @@ const changetoM3 = ()=>{
 
     <div className='flex w-[100vw] h-[10vh] items-end justify-center '>
         <div className="join ">
-            <input className="join-item btn btn-square w-[7vw] bg-white" type="radio" name="options" aria-label="الوسيط العقاري"  />
-            <input className="join-item btn btn-square w-[7vw]  bg-white" type="radio" name="options" aria-label="مالك العقار" />
-            <input className="join-item btn btn-square w-[7vw]  bg-white" type="radio" name="options" aria-label="المستأجر" checked/>
+        <div className='pt-20 flex gap-10 w-[100vw]  justify-center '>
+                <div      className='bg-[#D9D9D9] flex gap-10 rounded-full  justify-center  items-center  '>
+                <button onClick={RenterClicked}  className="btn btn-sm bg-[#BBA98D]  rounded-full">  المستأجر</button>
+                <button onClick={ownerClicked}   className="btn btn-sm bg-[#CAC8C8]   rounded-full"> مالك العقار </button>
+                <button onClick={DealerCliked}  className="btn btn-sm bg-[#CAC8C8]  rounded-full "> وسيط عقاري</button>
+
+                </div>
+        </div>
+
         </div>
     </div>
 
@@ -180,9 +237,9 @@ const changetoM3 = ()=>{
             <img width={300} src={step1} alt="" />
             <div className='w-[30vw]'>
                 
-                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
-                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
-            </div>
+                <h1 className='font-bold text-[2rem]'>{step1state}</h1>
+                <p>{step1para}</p>        
+    </div>
         </div>
 
 
@@ -190,17 +247,17 @@ const changetoM3 = ()=>{
             <img width={300} src={step2} alt="" />
             <div className='w-[30vw]'>
                 
-                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
-                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
-            </div>
+                <h1 className='font-bold text-[2rem]'> {step2state}</h1>
+                <p>{step2para}</p> 
+                            </div>
             </div>
 
             <div className='flex justify-center items-center'>
             <img width={300} src={step3} alt="" />
             <div className='w-[30vw]'>
                 
-                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
-                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
+                <h1 className='font-bold text-[2rem]'> {step3state}</h1>
+                <p>{step3para}</p> 
             </div>
             </div>
 
@@ -208,8 +265,8 @@ const changetoM3 = ()=>{
             <img width={300} src={step4} alt="" />
             <div className='w-[30vw]'>
                 
-                <h1 className='font-bold text-[2rem]'>إمكانية الدفع</h1>
-                <p>تستطيع الان السداد عن طريق الموقع مع اكثر من خدمة دفع</p>
+                <h1 className='font-bold text-[2rem]'> {step4state}</h1>
+                <p>{step4para}</p> 
             </div>
             </div>
             
