@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import bgsignup from "../assets/bgSignup1.png" 
+import { Link } from 'react-router-dom'
  
 export default function Signup() {
     const [username , setUsername] =useState()
@@ -66,8 +67,9 @@ export default function Signup() {
 							</svg>
 							<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="تاكيد كلمة السر" />
       </div>
-      
-							<button  class="block w-full bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2">التسجيل</button>
+<Link to='/login'>
+<button  class="block w-full bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2">التسجيل</button>
+</Link>
 		</div>
 	</div>
 

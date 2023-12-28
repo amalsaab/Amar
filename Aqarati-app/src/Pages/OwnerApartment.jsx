@@ -32,7 +32,7 @@ function OwnerApartment() {
 
     </div>
 
-    <div className='flex  gap-10 p-4'>
+    <div className='flex  gap-10 p-4 flex-wrap'>
 
 <ApartmentCard Head="شقة رقم 1 "  Age="12345566" NumberofUnit="18932"/>    
 <ApartmentCard Head="شقة رقم 1 "  Age="43348966" NumberofUnit="74399"/>    
