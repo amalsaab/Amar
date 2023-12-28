@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Aqar from '../.../../assets/aqar.png'
-export default function HistoryOwner() {
+export default function ApartmentHistory() {
   return (
 <>
 
@@ -44,13 +44,54 @@ export default function HistoryOwner() {
 
 
     </div>
-
+    
+    <div className='bg-white outline outline-[#BBA98D] flex flex-col justify-between items-center m-10 rounded-md p-4'>
+  <h1 className='text-lg bg-'>سجل الصيانة</h1>
+    <div dir='rtl' className="overflow-x-auto w-full">
+  <table className="table">
+    {/* head */}
+    <thead>
+      <tr>
+        <th></th>
+        <th>نوع الصيانة</th>
+        <th>تفاصيل الصيانة</th>
+        <th>تاريخ الصيانة</th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      <tr>
+        <th>1</th>
+        <td>سباكة</td>
+        <td>سباكة مطبخ</td>
+        <td>1445/1/1</td>
+      </tr>
+      {/* row 2 */}
+      <tr>
+        <th>2</th>
+        <td>Hart Hagerty</td>
+        <td>Desktop Support Technician</td>
+        <td>Purple</td>
+      </tr>
+      {/* row 3 */}
+      <tr>
+        <th>3</th>
+        <td>Brice Swyre</td>
+        <td>Tax Accountant</td>
+        <td>Red</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open</label>
   
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
+    
     <ul className="menu  w-80 min-h-full bg-white text-base-content text-[1.3rem] justify-between">
+    
       {/* Sidebar content here */}
         <div>
         <h1>Logo</h1>
