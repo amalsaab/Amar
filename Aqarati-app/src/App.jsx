@@ -11,6 +11,8 @@ import Login from './Pages/Login'
 import ApartmentHistory from './Pages/ApartmentHistory'
 import MaintenanceRequest from './Pages/MaintenanceRequest'
 import RentPayments from './Pages/RentPayments'
+import RequestAddBuilding from './Pages/RequestAddBuilding'
+import AddTenant from './Pages/AddTenant'
 function App() {
   return (
     <div>
@@ -30,6 +32,9 @@ function App() {
         <Route path="/historyOwner" element={<ApartmentHistory/>}/>
         <Route path="/MaintenanceRequest" element={<MaintenanceRequest/>}/>
         <Route path="/RentPayments" element={<RentPayments/>}/>
+        <Route path="/RequestAddBuilding" element={<RequestAddBuilding/>}/>
+        <Route path="/AddTenant" element={<AddTenant/>}/>
+
 
 
 
