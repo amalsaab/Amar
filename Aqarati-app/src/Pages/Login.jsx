@@ -1,5 +1,6 @@
 import React from 'react'
 import bgsignup from "../assets/bgSignup1.png" 
+import { Link } from 'react-router-dom'
 export default function Login() {
   return (
 <>
@@ -42,8 +43,10 @@ export default function Login() {
 							<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="كلمة السر" />
       </div>
       
-      
-							<button  class="block w-full bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2">تسجيل الدخول</button>
+<Link to='/Owner'>
+<button  class="block w-full bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2">تسجيل الدخول</button>
+
+</Link>
 		</div>
 	</div>
 </div>

@@ -27,7 +27,7 @@ function Owner() {
     </div>
 
 
-    <div className=' flex gap-10 p-4 '>
+    <div className=' flex gap-10 p-4 flex-wrap '>
     <Card Head="شقق المتكاملة" Location="الرياض، حي الوادي" Age="10 سنوات" NumberofUnit="20"/>
     <Card Head="شقق الكمال" Location="الرياض، حي العليا" Age="3 سنوات" NumberofUnit="32"/>
     <Card Head="شقق ركن الانوار" Location="الرياض، حي الملقا" Age="سنتين" NumberofUnit="2"/>
