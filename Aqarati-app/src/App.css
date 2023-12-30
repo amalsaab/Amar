@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.DashboredBG{
-    background-image: url('./assets/DashBoredBG.png');
-    background-size: cover;
+.DashboredBG {
+  background-image: url("./assets/DashBoredBG.png");
+  background-size: cover;
 }
 
 @media only screen and (max-width: 300px) {
-    
-  }
+}
