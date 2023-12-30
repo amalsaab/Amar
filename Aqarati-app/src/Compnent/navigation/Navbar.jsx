@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../../assets/whitelogo.svg'
 function Navbar() {
   return (
     <div>
@@ -12,7 +13,8 @@ function Navbar() {
 
     <Link to='/'>
     <div>
-    <h1 className='text-[2rem]'>LOGO</h1>
+    {/* <h1 className='text-[2rem]'>LOGO</h1> */}
+    <img className='h-[4.6rem]' src={logo} alt="" />
     </div>
 
     </Link>

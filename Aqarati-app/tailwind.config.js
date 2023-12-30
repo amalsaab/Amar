@@ -2,7 +2,16 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        customFont: ['"Custom Font"', "sans-serif"],
+        Meddon: ['"Meddon"', "cursive"],
+        Alice: ['"Alice"', "serif"],
+        Arabic: ['"Noto Sans Arabic"', "sans-serif"],
+
+        // Add more custom font families as needed
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
