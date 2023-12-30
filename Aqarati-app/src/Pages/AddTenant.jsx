@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Aqar from '../.../../assets/aqar.png'
-export default function ApartmentHistory() {
-  return (
-<>
 
-<div dir='rtl' >
+export default function AddTenant() {
+  return (
+    <>
+    
+    
+<div dir='rtl'>
      <div className="drawer lg:drawer-open">
             
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -17,73 +19,53 @@ export default function ApartmentHistory() {
     <div className='bg-white outline outline-[#BBA98D] flex justify-between items-center m-10 rounded-md w-full p-4'>
         
         <div className='flex flex-col' >
-            <h1 className='text-[2rem] font-bold  '>شقق المتكاملة</h1>
-            <h1>الرياض ، حي الوادي</h1>
-        </div>
-        <div >
-            <img width={150} src={Aqar} alt="" srcset="" />
-        </div>
-
-    </div>
-
-
-    </div>
-
-    <div className='flex w-full h-18  items-center justify-center '>
-    <div className='bg-white outline outline-[#BBA98D] flex justify-between items-center m-10 rounded-md w-full p-4'>
-        
-        <div className='flex flex-col' >
-            <h1 className='text-[2rem] font-bold  '>شقة رقم 1 </h1>
-            <h1>اسم المستأجر : محمد الشمري</h1>
-        </div>
-        <div >
-            <img width={150} src={Aqar} alt="" srcset="" />
-        </div>
-
-    </div>
-
-
-    </div>
+            <h1 className='text-[2rem] font-bold  '> اضافة مستاجر جديد</h1>
     
-    <div className='bg-white outline outline-[#BBA98D] flex flex-col justify-between items-center m-10 rounded-md p-4'>
-  <h1 className='text-lg bg-'>سجل الصيانة</h1>
-    <div dir='rtl' className="overflow-x-auto w-full">
-  <table className="table">
-    {/* head */}
-    <thead>
-      <tr>
-        <th></th>
-        <th>نوع الصيانة</th>
-        <th>تفاصيل الصيانة</th>
-        <th>تاريخ الصيانة</th>
-      </tr>
-    </thead>
-    <tbody>
-      {/* row 1 */}
-      <tr>
-        <th>1</th>
-        <td>سباكة</td>
-        <td>سباكة مطبخ</td>
-        <td>1445/1/1</td>
-      </tr>
-      {/* row 2 */}
-      <tr>
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Desktop Support Technician</td>
-        <td>Purple</td>
-      </tr>
-      {/* row 3 */}
-      <tr>
-        <th>3</th>
-        <td>Brice Swyre</td>
-        <td>Tax Accountant</td>
-        <td>Red</td>
-      </tr>
-    </tbody>
-  </table>
+        </div>
+        <div >
+            <img width={150} src={Aqar} alt="" srcset="" />
+        </div>
+
+    </div>
+
+
+    </div>
+
+      <div className='flex justify-end  ml-10 '>  <button  className=' flex flex-row-reverse items-center'> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+</svg>
+انتقال للخلف</button></div>
+     <div className='bg-white outline outline-[#BBA98D]  flex flex-col justify-between items-center m-10 rounded-md p-10 '>
+  <div className='flex flex-col justify-center items-center gap-5 max-sm:grid max-sm:grid-cols-1 '>
+<div className=' w-full flex justify-between gap-5 '>
+<label htmlFor="idLand" className='w-24'>اسم المستأجر</label>
+  <input className='outline outline-gray-200 rounded-md  w-48' type="text"  />
+
+
+  <label htmlFor="dateLand" className='w-24'>رقم الهوية</label>
+  <input  className='outline outline-gray-200 rounded-md w-48' type="text" />
 </div>
+<div className=' w-full flex justify-between gap-5'>
+  <label htmlFor="locationLand" className='w-24'>رقم الجوال</label>
+  <input  className='outline outline-gray-200 rounded-md  w-48' type="text" />
+
+<label htmlFor="sizeLand" className='w-24'>رقم الشقة</label>
+  <input  className='outline outline-gray-200 rounded-md  w-48' type="text" />
 </div>
+
+<div className=' w-full flex justify-between gap-5'>
+  <label htmlFor="locationLand" className='w-24'>رقم العقد</label>
+  <input  className='outline outline-gray-200 rounded-md  w-48' type="text" />
+
+<label htmlFor="sizeLand" className='w-24'>رقم الطابق</label>
+  <input  className='outline outline-gray-200 rounded-md  w-48' type="text" />
+</div>
+
+
+
+<button className='px-2 py-1 bg-primary rounded-lg'>ارسال</button>
+  </div>
+  </div>
     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open</label>
   
   </div> 
@@ -165,7 +147,6 @@ export default function ApartmentHistory() {
   </div>
 </div>
         </div>
-
-</>    
+    </>
   )
 }
