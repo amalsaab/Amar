@@ -1,29 +1,30 @@
 import "./App.css";
 import Landing from "../src/pages/Landing";
 import { Routes, Route } from "react-router-dom";
-import Qu from "../src/Pages/Qu";
-import Signup from "../src/Pages/Signup";
+import Qu from "../src/pages/Qu";
+import Signup from "../src/pages/Signup";
 import Card from "../src/Compnent/sataDisplay/Card";
 import Owner from "../src/pages/Owner";
-import OwnerApartment from "../src/Pages/OwnerApartment";
-import BottomNavigation from "./Compnent/navigation/BottomNavigation";
-import Login from "./Pages/Login";
-import ApartmentHistory from "./Pages/ApartmentHistory";
-import MaintenanceRequest from "./Pages/MaintenanceRequest";
-import RentPayments from "./Pages/RentPayments";
-import RequestAddBuilding from "./Pages/RequestAddBuilding";
-import AddTenant from "./Pages/AddTenant";
-import AddApartment from "./Pages/AddApartment";
-import Profile from "./Pages/Profile";
+import OwnerApartment from "../src/pages/OwnerApartment";
+import BottomNavigation from "../src/Compnent/navigation/BottomNavigation";
+import Login from "../src/pages/Login";
+import ApartmentHistory from "../src/pages/ApartmentHistory";
+import MaintenanceRequest from "../src/pages/MaintenanceRequest";
+import RentPayments from "../src/pages/RentPayments";
+import RequestAddBuilding from "../src/pages/RequestAddBuilding";
+import AddTenant from "../src/pages/AddTenant";
+import AddApartment from "../src/pages/AddApartment";
+import Profile from "../src/pages/Profile";
 function App() {
   return (
     <div className="font-Arabic">
       <Routes>
         {/* For component testing */}
         <Route path="/" element={<Landing />} /> {/* الصفحة الرئيسية */}
-        <Route path="/Q" element={<Qu />} /> {/* الاسئلة الشائعة */}
+        <Route path="/Qu" element={<Qu />} /> {/* الاسئلة الشائعة */}
         <Route path="/Owner" element={<Owner />} /> {/* صفحة عقارات المالك */}
-        <Route path="/Apartment" element={<OwnerApartment />} />{" "}
+        <Route path="/Apartment" element={<Owner />} />
+        {/* <Route path="/Apartment" element={<OwnerApartment />} />{" "} */}
         {/* شقق العقار*/}
         <Route path="/signup" element={<Signup />} /> {/*صفحة التسجيل  */}
         <Route path="/login" element={<Login />} /> {/* صفحة الدخول  */}
