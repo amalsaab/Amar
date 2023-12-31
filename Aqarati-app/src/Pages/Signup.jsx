@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import bgsignup from "../assets/bgSignup1.png" 
 import { Link } from 'react-router-dom'
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+
  
 export default function Signup() {
     const [username , setUsername] =useState()
@@ -12,7 +18,24 @@ export default function Signup() {
     const [checkBox , setCheckBox] =useState()
 
 
+
     
+
+const Signupbutn = () =>{
+	const auth = getAuth();
+	createUserWithEmailAndPassword(auth, email, password)
+			  .then((userCredential) => {
+
+								
+				})
+				.catch((error) => {
+					const errorCode = error.code;
+					const errorMessage = error.message;
+					// ..
+				});
+
+}
+
   return (
    <>
 
@@ -67,9 +90,9 @@ export default function Signup() {
 							</svg>
 							<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="تاكيد كلمة السر" />
       </div>
-<Link to='/login'>
-<button  class="block w-full bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2">التسجيل</button>
-</Link>
+
+<button onClick={Signupbutn}  class="block w-full bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2">التسجيل</button>
+
 		</div>
 	</div>
 
