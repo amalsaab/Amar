@@ -6,12 +6,13 @@ import Owner from "./Owner";
 
 function OwnerApartment() {
   return (
-    <div className="grid grid-cols-5 max-sm:flex DashboredBG ">
-      <div className="z-[999]">
+    // className="grid grid-cols-5 max-sm:flex DashboredBG "
+    <div >
+      {/* <div className="z-[999]">
         <Owner />
-      </div>
-      <div className="col-span-4 flex ">
-        <div className="flex  gap-10 p-4 flex-wrap justify-center">
+      </div> */}
+      {/* <div className="col-span-4 flex "> */}
+        <div className="flex   p-4 flex-wrap justify-center"> {/*gap-10*/}
           <ApartmentCard
             Head="شقة رقم 1 "
             Age="12345566"
@@ -33,7 +34,7 @@ function OwnerApartment() {
             NumberofUnit="89372"
           />
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 }
