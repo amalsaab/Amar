@@ -6,13 +6,7 @@ import Realstates from "../pages/Realstates";
 import { Routes, Route, useNavigate } from "react-router-dom";
 function Owner() {
   const navigate = useNavigate();
-  const [selected, setSelected] = React.useState({
-    aqar: true,
-    tqar: false,
-    syan: false,
-    show: false,
-    profile: false,
-  });
+  const [selected, setSelected] = React.useState("Realstates");
 
   return (
     <div dir="rtl">
@@ -30,7 +24,9 @@ function Owner() {
             </label>
 
             {/* Content */}
-            {selected.aqar && <Realstates />}
+            {/* {"Realstates" && <Realstates />} */}
+            {/* {"Realstates" && <Realstates />}
+            {"Realstates" && <Realstates />} */}
             {/* <Routes>
               <Route path="Realstates" element={<Realstates />} />
             </Routes> */}
@@ -92,17 +88,16 @@ function Owner() {
                 </li>
                 <li className={selected.tqar ? "bg-primary rounded-lg " : ""}>
                   <button
-                    onClick={() =>{
+                    onClick={() => {
                       setSelected({
                         aqar: false,
                         tqar: true,
                         syan: false,
                         show: false,
                         profile: false,
-                      })
-                      navigate("/Apartment")
-                    }
-                  }
+                      });
+                      navigate("/Apartment");
+                    }}
                     className=""
                   >
                     <svg
