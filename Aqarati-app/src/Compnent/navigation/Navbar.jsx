@@ -27,9 +27,12 @@ function Navbar() {
     <h1>الخدمات</h1>
 
 </div>
-<div className='w-[10vw]'>
+<div className=' flex gap-10'>
   <Link to='/signup'>
-  <button className='w-[8vw] rounded-sm bg-[#ffff] outline outline-[#BBA98D] text-black'>تسجيل جديد</button>
+  <button className="btn btn-outline btn-secondary">تسجيل جديد</button>
+  </Link>
+  <Link to='/login'>
+  <button className="btn btn-outline btn-secondary">تسجيل دخول</button>
   </Link>
 </div>
 </div>

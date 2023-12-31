@@ -80,11 +80,9 @@ function Landing() {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // Increment the active slide, and reset to 1 if it exceeds the total number of slides
-      setActiveSlide((prevSlide) => (prevSlide % 3) + 1);
-    }, 3000); // 3000 milliseconds = 3 seconds
+      setActiveSlide((prevActiveSlide) => (prevActiveSlide % 3) + 1);
+    }, 200); 
 
-    // Clear the interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
 
@@ -175,6 +173,7 @@ function Landing() {
           }`}
         >
           <img src={bg1} alt="Slide 3" className="w-full" />
+
           <div className="absolute flex justify-between transform -translate-y-1/6 left-200 right-5 top-1/2">
             <h1 className="text-white text-[3rem] w-[50vw] text-right">
               نوفر لكم خدمات إدارة الإيجار بكفاءة وسهولة، يتيح لك تأجير ممتلكاتك
@@ -182,21 +181,17 @@ function Landing() {
             </h1>
           </div>
         </div>
-        <div className="flex justify-start w-full py-2 gap-2 absolute items-end h-[85vh] pr-10 ">
-          <a href="#slide1" className="btn btn-sm"></a>
-          <a href="#slide2" className="btn btn-sm"></a>
-          <a href="#slide3" className="btn btn-sm"></a>
-        </div>
+ 
       </div>
 
       {/* Slide and Nav ends */}
 
-      <div className="w-[100vw] h-[70vh]">
+      <div className="pb-10">
         <div className="flex items-center justify-center w-[100vw] h-[30vh] text-[3rem]">
           <h1>من نخدم</h1>
         </div>
 
-        <div className="flex items-center justify-center w-[100vw] h-[20vh] flex-col">
+        <div className="flex items-center justify-center  flex-col">
           <div className="flex items-center">
             <h1 id="title" className="text-[3rem]">
               المستأجر
