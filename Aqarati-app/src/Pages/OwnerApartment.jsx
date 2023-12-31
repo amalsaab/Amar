@@ -6,7 +6,7 @@ import Aqar from '../.../../assets/aqar.png'
 
 function OwnerApartment() {
   return (
-    <div>
+    <div >
                 <div >
      <div className="drawer lg:drawer-open">
             
