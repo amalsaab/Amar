@@ -1,17 +1,50 @@
 import React, { useState } from 'react'
 import bgsignup from "../assets/bgSignup1.png" 
-import { Link } from 'react-router-dom'
- 
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 export default function Signup() {
     const [username , setUsername] =useState()
     const [nationalID , setNationalID ] =useState()
     const [email , setEmail] =useState()
-    const [phone , setPhone] =useState()
     const [password , setPassword] =useState()
     const [confirmPassword , setConfirmPassword] =useState()
     const [checkBox , setCheckBox] =useState()
+	const[message , setMessage] = useState()
+	const navg = useNavigate()
+	const handelSubmit = () => {
+		if (username === "" || email === "" || password === "" || nationalID ==="" || confirmPassword === "") {
+		  setMessage("الرجاء تعبئة الحقول");
+		}
+		 else if (!username.match(/^[a-zA-Z0-9]{5,25}$/)) {
+		  setMessage("اسم المستخدم لابد يكون 4 احرف او اكثر");
+		} else if (
+		  !email.match(/^[A-Za-z0-9-]+@[A-Za-z0-9-]+.[A-Za-z]{2,4}$/)
+		) {
+		  setMessage("الايميل غير صحيح");
+		} else if (!password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,20}$/)) {
+		  setMessage(
+			"كلمة السر يجب ان تكون  6 احرف علىالاقل حرف او رقم واحد "
+		  );
+		}
+		  else if (confirmPassword !== password  ){
+			setMessage("كلمة السر غير مطابقة")
+	
+		} 
+		else if(!checkBox.checked){
+			setMessage("الرجاء الموافقة على الشروط")
 
-
+		}
+		else {
+		  axios.post("https://6591405d8cbbf8afa96c0494.mockapi.io/users", {
+			  username: username,
+			  email: email,
+			  password: password,
+			  nationalID:nationalID,
+	
+			})
+			.then( setMessage('تم التسجيل بنجاح'),navg('/login'));
+		}
+	  };
     
   return (
    <>
@@ -20,7 +53,7 @@ export default function Signup() {
 <div class="h-screen md:flex  ">
 
 	<div  class="flex md:w-1/2 justify-center py-10 items-center bg-white ">
-		<div class="bg-black ">
+		<div class="bg-white ">
 			<h1 class="text-gray-800 font-bold text-2xl mb-4">تسجيل جديد</h1>
             <div className=' flex gap-5 justify-end rounded-lg mb-4'><button class="text-sm font-normal text-black bg-primary rounded-lg p-1">مالك عقار</button>
             <button class="text-sm font-normal text-gray-600 ">مستأجر</button></div>
@@ -31,7 +64,7 @@ export default function Signup() {
 					<path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
 						clip-rule="evenodd" />
 				</svg>
-				<input  class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="اسم المستخدم" />
+				<input  value={username} onChange={(e)=>setUsername(e.target.value)} class="pl-2 outline-none border-none" type="text"  placeholder="اسم المستخدم" />
       </div>
 				<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none"
@@ -39,7 +72,7 @@ export default function Signup() {
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 							d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
 					</svg>
-					<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="رقم الهوية" />
+					<input value={nationalID} onChange={(e)=>setNationalID(e.target.value)} class="pl-2 outline-none border-none" type="text"  placeholder="رقم الهوية" />
       </div>
 					<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none"
@@ -47,7 +80,7 @@ export default function Signup() {
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 								d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
 						</svg>
-						<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="البريد الإلكتروني" />
+						<input value={email} onChange={(e)=>setEmail(e.target.value)} class="pl-2 outline-none border-none" type="email"  placeholder="البريد الإلكتروني" />
       </div>
 						<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
@@ -56,7 +89,7 @@ export default function Signup() {
 									d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
 									clip-rule="evenodd" />
 							</svg>
-							<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="كلمة السر" />
+							<input value={password} onChange={(e)=>setPassword(e.target.value)} class="pl-2 outline-none border-none" type="password"  placeholder="كلمة السر" />
       </div>
       <div class="flex items-center border-2 py-2 px-3 rounded-2xl">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
@@ -65,11 +98,15 @@ export default function Signup() {
 									d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
 									clip-rule="evenodd" />
 							</svg>
-							<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="تاكيد كلمة السر" />
+							<input value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} class="pl-2 outline-none border-none" type="password"  placeholder="تاكيد كلمة السر" />
       </div>
-<Link to='/login'>
-<button  class="block w-full bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2">التسجيل</button>
-</Link>
+
+<div className='flex flex-row-reverse gap-5 '>  <label className='' htmlFor="terms">اوافق على جميع الشروط والاحكام</label>
+  <input value={checkBox}  onChange={(e)=> setCheckBox(e.target.checked)} type="checkbox" id='terms' />
+</div>
+
+<button onClick={handelSubmit}  class="block w-full bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2">التسجيل</button>
+<p className='text-red-500'>{message}</p>
 		</div>
 	</div>
 
