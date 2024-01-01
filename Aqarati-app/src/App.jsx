@@ -16,6 +16,7 @@ import AddTenant from "../src/pages/AddTenant";
 import AddApartment from "../src/pages/AddApartment";
 import Profile from "../src/pages/Profile";
 import PaymentPage from "./Pages/PaymentPage";
+import ShowRequest from "./Pages/ShowRequest";
 function App() {
   return (
     <div className="font-Arabic">
@@ -23,17 +24,15 @@ function App() {
         {/* For component testing */}
         <Route path="/Owner" element={<Owner />} /> {/* صفحة عقارات المالك */}
         {/* <Route path="/Apartment" element={<Owner />} /> */}
-        <Route path="/Apartment" element={<Owner />} />{" "}
-        {/* شقق العقار*/}
-        <Route path="/ApartmentHistory" element={<Owner />} />{" "}
-        {/* سجل صيانة الشقة */}
+
+        <Route path="/Apartment" element={<Owner />} />{/* شقق العقار*/}
+        <Route path="/ApartmentHistory" element={<Owner />} />{/* سجل صيانة الشقة */}
+
         <Route
           path="/MaintenanceRequest"
           element={<MaintenanceRequest />}
-        />{" "}
-        {/* صفحة رفع طلب صيانة */}
-        <Route path="/RentPayments" element={<RentPayments />} />{" "}
-        {/* صفحة جدول الدفعات */}
+        />{/* صفحة رفع طلب صيانة */}
+        <Route path="/RentPayments" element={<RentPayments />} />{/* صفحة جدول الدفعات */}
         <Route
           path="/RequestAddBuilding"
           element={<Owner />}
@@ -47,6 +46,7 @@ function App() {
         <Route path="/Profile" element={<Owner />} /> {/* ملف التعريف */}
 
         <Route path="/PaymentPage" element={<PaymentPage />} /> {/* صفحة دفع المستأجر  */}
+        <Route path="/ShowRequest" element={<ShowRequest />} /> {/* عرض الطلبات */}
 
       </Routes>}
 
