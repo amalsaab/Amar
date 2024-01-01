@@ -17,6 +17,7 @@ import AddApartment from "../src/pages/AddApartment";
 import Profile from "../src/pages/Profile";
 import PaymentPage from "./Pages/PaymentPage";
 import ShowRequest from "./Pages/ShowRequest";
+import TenantRentPayment from "./Pages/TenantRentPayment";
 function App() {
   return (
     <div className="font-Arabic">
@@ -26,7 +27,7 @@ function App() {
         {/* <Route path="/Apartment" element={<Owner />} /> */}
 
         <Route path="/Apartment" element={<Owner />} />{/* شقق العقار*/}
-        <Route path="/ApartmentHistory" element={<Owner />} />{/* سجل صيانة الشقة */}
+        <Route path="/ApartmentHistory" element={<ApartmentHistory />} />{/* سجل صيانة الشقة */}
 
         <Route
           path="/MaintenanceRequest"
@@ -47,6 +48,7 @@ function App() {
 
         <Route path="/PaymentPage" element={<PaymentPage />} /> {/* صفحة دفع المستأجر  */}
         <Route path="/ShowRequest" element={<ShowRequest />} /> {/* عرض الطلبات */}
+        <Route path="/TenantRentPayment" element={<TenantRentPayment />} /> {/* صفحة سداد المدفوعات للمستاجر*/}
 
       </Routes>}
 
