@@ -6,6 +6,7 @@ import Owner from "./Owner";
 
 function OwnerApartment() {
   return (
+
     // className="grid grid-cols-5 max-sm:flex DashboredBG "
     <div >
       {/* <div className="z-[999]">
@@ -33,6 +34,7 @@ function OwnerApartment() {
             Age="92893427"
             NumberofUnit="89372"
           />
+
         </div>
       {/* </div> */}
     </div>
