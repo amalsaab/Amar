@@ -13,7 +13,7 @@ function OwnerApartment() {
         <Owner />
       </div> */}
       {/* <div className="col-span-4 flex "> */}
-        <div className="flex   p-4 flex-wrap justify-center"> {/*gap-10*/}
+        <div className="flex gap-10 p-4 flex-wrap justify-center"> {/*gap-10*/}
           <ApartmentCard
             Head="شقة رقم 1 "
             Age="12345566"

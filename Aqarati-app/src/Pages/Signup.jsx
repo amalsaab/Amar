@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import bgsignup from "../assets/bgSignup1.png";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { getAuth , createUserWithEmailAndPassword} from "firebase/auth";
+import { db } from "../Compnent/dataInput/firebase";
+import { collection, addDoc } from "firebase/firestore"; 
+
 export default function Signup() {
   const [username, setUsername] = useState();
   const [nationalID, setNationalID] = useState();
@@ -32,15 +35,67 @@ export default function Signup() {
       setMessage("كلمة السر غير مطابقة");
     } else if (!checkBox.checked) {
       setMessage("الرجاء الموافقة على الشروط");
+	  const auth = getAuth();
+	  createUserWithEmailAndPassword(auth, email, password)
+				.then((userCredential) => {
+	  
+				  })
+				  .then(async()=>{
+					  await addDoc(collection(db,"UsersInfo"),{
+						  UserName: username,
+						  NID: nationalID,
+						  Email: email,
+						  Password: password,
+						  State: selectedOption,
+						  RealState: [{
+							Name: "شقق المتكاملة",
+							city: "الرياض، حي الوادي",
+							StateAge: 3,
+							Unit: 30,
+							Units:[{
+								ApartmentNum: 5,
+								Tenant: "",
+								ContractNum: 3178,
+								Enum: 37286,
+								Payment: [{}],
+								maintenanis: [{}],
+
+							},
+							{
+								ApartmentNum: 1,
+								Tenant: "",
+								ContractNum: 7678,
+								Enum: 9286,
+								Payment: [{}],
+								maintenanis: [{}],
+
+							},
+							{
+								ApartmentNum: 3,
+								Tenant: "",
+								ContractNum: 65178,
+								Enum: 8943286,
+								Payment: [{}],
+								maintenanis: [{}],
+
+							}
+						]
+						  },
+						  {
+							Name: "شقق المحبة",
+							city: "الرياض، حي العليا",
+							StateAge: 10,
+							Unit: 21
+						  }
+						
+						]
+					  }) 
+					  navg("/login");
+				  })
     } else {
-      axios
-        .post("https://6591405d8cbbf8afa96c0494.mockapi.io/users", {
-          username: username,
-          email: email,
-          password: password,
-          nationalID: nationalID,
-        })
-        .then(setMessage("تم التسجيل بنجاح"), navg("/login"));
+      
+
+  
     }
   };
   const handleOptionChange = (event) => {
@@ -53,41 +108,7 @@ export default function Signup() {
           <div class="bg-white outline outline-[#BBA98D] w-1/2 gap-3 rounded-md p-5 shadow-lg flex flex-col  ">
             <h1 class="text-gray-800 font-bold text-2xl mb-4">تسجيل جديد</h1>
 
-            <div className="flex gap-5 justify-end rounded-lg mb-4">
-              <label
-                htmlFor="owner"
-                className={`text-sm font-normal ${
-                  selectedOption === "owner"
-                    ? "text-white bg-primary"
-                    : "text-black bg-gray-200"
-                } rounded-lg p-1`}
-              >
-                مالك عقار
-              </label>
-              <input
-                type="radio"
-                id="owner"
-                checked={selectedOption === "owner"}
-                onChange={handleOptionChange}
-              />
-
-              <label
-                htmlFor="tenant"
-                className={`text-sm font-normal ${
-                  selectedOption === "tenant"
-                    ? "text-white bg-primary"
-                    : "text-black bg-gray-200"
-                } rounded-lg p-1`}
-              >
-                مستأجر
-              </label>
-              <input
-                type="radio"
-                id="tenant"
-                checked={selectedOption === "tenant"}
-                onChange={handleOptionChange}
-              />
-            </div>
+            
             <div className="flex justify-center ">
               <div className="flex flex-col w-72 ">
                 <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
@@ -199,6 +220,42 @@ export default function Signup() {
                     placeholder="تاكيد كلمة السر"
                   />
                 </div>
+
+                <div className="flex gap-5 justify-center rounded-lg my-4">
+              <label
+                htmlFor="owner"
+                className={`text-sm font-normal ${
+                  selectedOption === "owner"
+                    ? "text-white bg-primary"
+                    : "text-black bg-gray-200"
+                } rounded-lg p-1`}
+              >
+                مالك عقار
+              </label>
+              <input
+                type="radio"
+                id="owner"
+                checked={selectedOption === "owner"}
+                onChange={handleOptionChange}
+              />
+
+              <label
+                htmlFor="tenant"
+                className={`text-sm font-normal ${
+                  selectedOption === "tenant"
+                    ? "text-white bg-primary"
+                    : "text-black bg-gray-200"
+                } rounded-lg p-1`}
+              >
+                مستأجر
+              </label>
+              <input
+                type="radio"
+                id="tenant"
+                checked={selectedOption === "tenant"}
+                onChange={handleOptionChange}
+              />
+            </div>
 
                 <div className="flex flex-row-reverse gap-5 justify-center mt-3 ">
                   {" "}

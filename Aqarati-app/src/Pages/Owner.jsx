@@ -1,16 +1,23 @@
 import React from "react";
 import Card from "../../src/Compnent/sataDisplay/Card";
-import Apartment from "../pages/OwnerApartment";
+import OwnerApartment from "../pages/OwnerApartment";
+import ApartmentHistory from "../pages/ApartmentHistory";
+import MaintenanceRequest from "../pages/MaintenanceRequest";
+import RentPayments from "../pages/RentPayments";
+import RequestAddBuilding from "../pages/RequestAddBuilding";
+import AddTenant from "../pages/AddTenant";
+import AddApartment from "../pages/AddApartment";
+import Profile from "../pages/Profile";
 import logo from "../assets/logo.svg";
 import Realstates from "../pages/Realstates";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useViewPage } from "./store";
 function Owner() {
-  const setPage = () => {
-    useViewPage.setState({ namePage: "Realstates" });
-  }
+  // const setPage = () => {
+  //   useViewPage.setState({ namePage: "Realstates" });
+  // };
   const navigate = useNavigate();
-  const { namePage, setNamePage } = useViewPage(state => state);
+  const { namePage, setNamePage } = useViewPage((state) => state);
   const [selected, setSelected] = React.useState({
     aqar: true,
     tqar: false,
@@ -19,12 +26,9 @@ function Owner() {
     profile: false,
   });
 
-  React.useEffect(() => {
-      setPage()
-  }, []);
-
-
-
+  // React.useEffect(() => {
+  //   setPage();
+  // }, []);
 
   return (
     <div dir="rtl">
@@ -43,7 +47,15 @@ function Owner() {
 
             {/* Content */}
             {namePage === "Realstates" && <Realstates />}
-            {namePage === "tqar" && <Apartment />}
+            {namePage === "OwnerApartment" && <OwnerApartment />}
+            {namePage === "ApartmentHistory" && <ApartmentHistory />}
+            {namePage === "MaintenanceRequest" && <MaintenanceRequest />}
+            {namePage === "RentPayments" && <RentPayments />}
+            {namePage === "RequestAddBuilding" && <RequestAddBuilding />}
+            {namePage === "AddTenant" && <AddTenant />}
+            {namePage === "AddApartment" && <AddApartment />}
+            {namePage === "Profile" && <Profile />}
+
             {/* {"Realstates" && <Realstates />} */}
             {/* <Routes>
               <Route path="Realstates" element={<Realstates />} />
@@ -82,7 +94,7 @@ function Owner() {
                         profile: false,
                       });
                       setNamePage("Realstates");
-                      // navigate("/Owner");
+                      navigate("/Apartment");
                     }}
                   >
                     <svg
@@ -142,14 +154,15 @@ function Owner() {
 
                 <li className={selected.syan ? "bg-primary rounded-lg " : ""}>
                   <button
-                    onClick={() =>
-                      setSelected({
-                        aqar: false,
-                        tqar: false,
-                        syan: true,
-                        show: false,
-                        profile: false,
-                      })
+                    onClick={
+                      () =>
+                        setSelected({
+                          aqar: false,
+                          tqar: false,
+                          syan: true,
+                          show: false,
+                          profile: false,
+                        })
                       // setNamePage("");
                     }
                   >
@@ -210,15 +223,17 @@ function Owner() {
                   className={selected.profile ? "bg-primary rounded-lg " : ""}
                 >
                   <button
-                    onClick={() =>
+                    onClick={() => {
                       setSelected({
                         aqar: false,
                         tqar: false,
                         syan: false,
                         show: false,
                         profile: true,
-                      })
-                    }
+                      });
+                      setNamePage("Profile");
+                      navigate("/Profile");
+                    }}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -243,15 +258,7 @@ function Owner() {
                 </li>
               </div>
 
-              <div className="flex flex-col gap-4">
-                <button className=" w-72 h-12 rounded-md  bg-[#ffff] outline outline-[#BBA98D] text-black ">
-                  الدعم الفني
-                </button>
-
-                <button className="bg-[#BE6363] w-72 h-12 rounded-md text-white">
-                  تسجيل الخروج
-                </button>
-              </div>
+              
             </ul>
           </div>
         </div>
