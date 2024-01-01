@@ -4,8 +4,13 @@ import Apartment from "../pages/OwnerApartment";
 import logo from "../assets/logo.svg";
 import Realstates from "../pages/Realstates";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import { useViewPage } from "./store";
 function Owner() {
+  const setPage = () => {
+    useViewPage.setState({ namePage: "Realstates" });
+  }
   const navigate = useNavigate();
+  const { namePage, setNamePage } = useViewPage(state => state);
   const [selected, setSelected] = React.useState({
     aqar: true,
     tqar: false,
@@ -13,6 +18,13 @@ function Owner() {
     show: false,
     profile: false,
   });
+
+  React.useEffect(() => {
+      setPage()
+  }, []);
+
+
+
 
   return (
     <div dir="rtl">
@@ -30,7 +42,9 @@ function Owner() {
             </label>
 
             {/* Content */}
-            {selected.aqar && <Realstates />}
+            {namePage === "Realstates" && <Realstates />}
+            {namePage === "tqar" && <Apartment />}
+            {/* {"Realstates" && <Realstates />} */}
             {/* <Routes>
               <Route path="Realstates" element={<Realstates />} />
             </Routes> */}
@@ -67,7 +81,8 @@ function Owner() {
                         show: false,
                         profile: false,
                       });
-                      navigate("/Owner");
+                      setNamePage("Realstates");
+                      // navigate("/Owner");
                     }}
                   >
                     <svg
@@ -92,17 +107,17 @@ function Owner() {
                 </li>
                 <li className={selected.tqar ? "bg-primary rounded-lg " : ""}>
                   <button
-                    onClick={() =>{
+                    onClick={() => {
                       setSelected({
                         aqar: false,
                         tqar: true,
                         syan: false,
                         show: false,
                         profile: false,
-                      })
-                      navigate("/Apartment")
-                    }
-                  }
+                      });
+                      setNamePage("tqar");
+                      // navigate("/Apartment");
+                    }}
                     className=""
                   >
                     <svg
@@ -135,6 +150,7 @@ function Owner() {
                         show: false,
                         profile: false,
                       })
+                      // setNamePage("");
                     }
                   >
                     <svg
