@@ -20,10 +20,15 @@ export default function Login() {
       let Data = doc.data()
       let userNameInDB = Data.UserName
       let PassInDB = Data.Password
+      let State = Data.State
 
-      if (username == userNameInDB && password == PassInDB){
+      if (username == userNameInDB && password == PassInDB &&State == "owner" ){
+
         // Nav to the owner page
+        nav('/Owner')  
+      }else if(username == userNameInDB && password == PassInDB &&State == "tenant"){
         nav('/Owner')
+
       }
 
     });
