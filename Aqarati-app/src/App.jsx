@@ -22,7 +22,7 @@ function App() {
         {/* For component testing */}
         <Route path="/Owner" element={<Owner />} /> {/* صفحة عقارات المالك */}
         {/* <Route path="/Apartment" element={<Owner />} /> */}
-        <Route path="/Apartment" element={<OwnerApartment />} />{" "}
+        <Route path="/Apartment" element={<Owner />} />{" "}
         {/* شقق العقار*/}
         <Route path="/ApartmentHistory" element={<ApartmentHistory />} />{" "}
         {/* سجل صيانة الشقة */}
@@ -35,14 +35,14 @@ function App() {
         {/* صفحة جدول الدفعات */}
         <Route
           path="/RequestAddBuilding"
-          element={<RequestAddBuilding />}
+          element={<Owner />}
         />{" "}
         {/* صفحة طلب اضافة عقار */}
-        <Route path="/AddTenant" element={<AddTenant />} />{" "}
+        <Route path="/AddTenant" element={<Owner />} />{" "}
         {/* صفحة اضافة مستاجر */}
-        <Route path="/AddApartment" element={<AddApartment />} />{" "}
+        <Route path="/AddApartment" element={<Owner />} />{" "}
         {/* صفحة اضافة شقة */}
-        <Route path="/Profile" element={<Profile />} /> {/* ملف التعريف */}
+        <Route path="/Profile" element={<Owner />} /> {/* ملف التعريف */}
       </Routes>}
 
       <div>

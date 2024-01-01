@@ -1,22 +1,43 @@
 import React from "react";
 import Card from "../../src/Compnent/sataDisplay/Card";
 import Aqar from "../.../../assets/aqar.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useViewPage } from "./store";
 const Realstates = () => {
+  const navigate = useNavigate();
+  const { namePage, setNamePage } = useViewPage((state) => state);
   return (
     <div>
       <div className="flex w-full  items-center justify-center  ">
         <div className="bg-white outline outline-primary flex justify-center items-center m-10 rounded-md  p-4 gap-4 flex-wrap">
           {/* <div className="flex "> */}
-          <Link to={"/RequestAddBuilding"} className="btn btn-xs btn-primary sm:btn-sm md:btn-md lg:btn-md">
+          <button
+            onClick={() => {
+              setNamePage("RequestAddBuilding");
+              navigate("/RequestAddBuilding");
+            }}
+            className="btn btn-xs btn-primary sm:btn-sm md:btn-md lg:btn-md"
+          >
             اضافة عقار
-          </Link>
-          <Link to={"/AddApartment"} className="btn btn-xs btn-primary sm:btn-sm md:btn-md lg:btn-md">
+          </button>
+          <button
+            onClick={() => {
+              setNamePage("AddApartment");
+              navigate("/AddApartment");
+            }}
+            className="btn btn-xs btn-primary sm:btn-sm md:btn-md lg:btn-md"
+          >
             اضافة شقة
-          </Link>
-          <Link to={"/AddTenant"} className="btn btn-xs btn-primary sm:btn-sm md:btn-md lg:btn-md">
+          </button>
+          <button
+            onClick={() => {
+              setNamePage("AddTenant");
+              navigate("/AddTenant");
+            }}
+            className="btn btn-xs btn-primary sm:btn-sm md:btn-md lg:btn-md"
+          >
             اسناد مستأجر
-          </Link>
+          </button>
           {/* <Link to={"/RequestAddBuilding"} className="btn btn-xs btn-primary sm:btn-sm md:btn-md lg:btn-md">
             اضافة صيانة
           </Link> */}
