@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../../src/Compnent/sataDisplay/Card";
-import OwnerApartment from "../pages/OwnerApartment";
+import OwnerApartment from "../Pages/OwnerApartment";
 import ApartmentHistory from "../pages/ApartmentHistory";
 import MaintenanceRequest from "../pages/MaintenanceRequest";
 import RentPayments from "../pages/RentPayments";
