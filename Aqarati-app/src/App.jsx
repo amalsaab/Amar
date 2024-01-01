@@ -1,11 +1,11 @@
 import "./App.css";
-import Landing from "../../src/pages/Landing";
+import Landing from "../src/pages/Landing";
 import { Routes, Route } from "react-router-dom";
 import Qu from "../src/pages/Qu";
 import Signup from "../src/pages/Signup";
 import Card from "../src/Compnent/sataDisplay/Card";
 import Owner from "../src/pages/Owner";
-import OwnerApartment from "../../src/pages/OwnerApartment";
+import OwnerApartment from "../src/pages/OwnerApartment";
 import BottomNavigation from "../src/Compnent/navigation/BottomNavigation";
 import Login from "../src/pages/Login";
 import ApartmentHistory from "../src/pages/ApartmentHistory";
