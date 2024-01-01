@@ -1,9 +1,44 @@
 import React, { useState } from "react";
 import bgsignup from "../assets/bgSignup1.png";
 import { Link } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../Compnent/dataInput/firebase";
+import { getAuth } from "firebase/auth";
+import { collection, getDocs } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
+
 export default function Login() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+
+  const nav = useNavigate()
+  const singinbtn = async()=>{
+
+    const querySnapshot = await getDocs(collection(db, "UsersInfo"));
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      let Data = doc.data()
+      let userNameInDB = Data.UserName
+      let PassInDB = Data.Password
+      let State = Data.State
+
+      if (username == userNameInDB && password == PassInDB &&State == "owner" ){
+
+        // Nav to the owner page
+        nav('/Owner')  
+      }else if(username == userNameInDB && password == PassInDB &&State == "tenant"){
+        nav('/Owner')
+
+      }
+
+    });
+
+  
+
+
+
+  }
+
 
   return (
     <>
@@ -71,7 +106,7 @@ export default function Login() {
                 </div>
 
                 <div className="flex justify-center">
-                  <button class="block w-44 bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2">
+                  <button onClick={singinbtn} class="block w-44 bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2">
                     تسجيل الدخول
                   </button>
                 </div>

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import bgsignup from "../assets/bgSignup1.png";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { getAuth , createUserWithEmailAndPassword} from "firebase/auth";
+import { db } from "../Compnent/dataInput/firebase";
+import { collection, addDoc } from "firebase/firestore"; 
+
 export default function Signup() {
   const [username, setUsername] = useState();
   const [nationalID, setNationalID] = useState();
@@ -32,15 +35,67 @@ export default function Signup() {
       setMessage("كلمة السر غير مطابقة");
     } else if (!checkBox.checked) {
       setMessage("الرجاء الموافقة على الشروط");
+	  const auth = getAuth();
+	  createUserWithEmailAndPassword(auth, email, password)
+				.then((userCredential) => {
+	  
+				  })
+				  .then(async()=>{
+					  await addDoc(collection(db,"UsersInfo"),{
+						  UserName: username,
+						  NID: nationalID,
+						  Email: email,
+						  Password: password,
+						  State: selectedOption,
+						  RealState: [{
+							Name: "شقق المتكاملة",
+							city: "الرياض، حي الوادي",
+							StateAge: 3,
+							Unit: 30,
+							Units:[{
+								ApartmentNum: 5,
+								Tenant: "",
+								ContractNum: 3178,
+								Enum: 37286,
+								Payment: [{}],
+								maintenanis: [{}],
+
+							},
+							{
+								ApartmentNum: 1,
+								Tenant: "",
+								ContractNum: 7678,
+								Enum: 9286,
+								Payment: [{}],
+								maintenanis: [{}],
+
+							},
+							{
+								ApartmentNum: 3,
+								Tenant: "",
+								ContractNum: 65178,
+								Enum: 8943286,
+								Payment: [{}],
+								maintenanis: [{}],
+
+							}
+						]
+						  },
+						  {
+							Name: "شقق المحبة",
+							city: "الرياض، حي العليا",
+							StateAge: 10,
+							Unit: 21
+						  }
+						
+						]
+					  }) 
+					  navg("/login");
+				  })
     } else {
-      axios
-        .post("https://6591405d8cbbf8afa96c0494.mockapi.io/users", {
-          username: username,
-          email: email,
-          password: password,
-          nationalID: nationalID,
-        })
-        .then(setMessage("تم التسجيل بنجاح"), navg("/login"));
+      
+
+  
     }
   };
   const handleOptionChange = (event) => {
