@@ -36,6 +36,15 @@ export default function Profile() {
           </div>
 
           <button className="px-2 py-1 bg-primary rounded-lg">رجوع</button>
+          <div className="flex gap-4">
+                <button className=" w-72 h-12 rounded-md  bg-[#ffff] outline outline-[#BBA98D] text-black ">
+                  الدعم الفني
+                </button>
+
+                <button className="bg-[#BE6363] w-72 h-12 rounded-md text-white">
+                  تسجيل الخروج
+                </button>
+              </div>
         </div>
       </div>
     </>

@@ -53,41 +53,7 @@ export default function Signup() {
           <div class="bg-white outline outline-[#BBA98D] w-1/2 gap-3 rounded-md p-5 shadow-lg flex flex-col  ">
             <h1 class="text-gray-800 font-bold text-2xl mb-4">تسجيل جديد</h1>
 
-            <div className="flex gap-5 justify-end rounded-lg mb-4">
-              <label
-                htmlFor="owner"
-                className={`text-sm font-normal ${
-                  selectedOption === "owner"
-                    ? "text-white bg-primary"
-                    : "text-black bg-gray-200"
-                } rounded-lg p-1`}
-              >
-                مالك عقار
-              </label>
-              <input
-                type="radio"
-                id="owner"
-                checked={selectedOption === "owner"}
-                onChange={handleOptionChange}
-              />
-
-              <label
-                htmlFor="tenant"
-                className={`text-sm font-normal ${
-                  selectedOption === "tenant"
-                    ? "text-white bg-primary"
-                    : "text-black bg-gray-200"
-                } rounded-lg p-1`}
-              >
-                مستأجر
-              </label>
-              <input
-                type="radio"
-                id="tenant"
-                checked={selectedOption === "tenant"}
-                onChange={handleOptionChange}
-              />
-            </div>
+            
             <div className="flex justify-center ">
               <div className="flex flex-col w-72 ">
                 <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
@@ -199,6 +165,42 @@ export default function Signup() {
                     placeholder="تاكيد كلمة السر"
                   />
                 </div>
+
+                <div className="flex gap-5 justify-center rounded-lg my-4">
+              <label
+                htmlFor="owner"
+                className={`text-sm font-normal ${
+                  selectedOption === "owner"
+                    ? "text-white bg-primary"
+                    : "text-black bg-gray-200"
+                } rounded-lg p-1`}
+              >
+                مالك عقار
+              </label>
+              <input
+                type="radio"
+                id="owner"
+                checked={selectedOption === "owner"}
+                onChange={handleOptionChange}
+              />
+
+              <label
+                htmlFor="tenant"
+                className={`text-sm font-normal ${
+                  selectedOption === "tenant"
+                    ? "text-white bg-primary"
+                    : "text-black bg-gray-200"
+                } rounded-lg p-1`}
+              >
+                مستأجر
+              </label>
+              <input
+                type="radio"
+                id="tenant"
+                checked={selectedOption === "tenant"}
+                onChange={handleOptionChange}
+              />
+            </div>
 
                 <div className="flex flex-row-reverse gap-5 justify-center mt-3 ">
                   {" "}
