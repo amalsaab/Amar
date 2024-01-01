@@ -2,7 +2,7 @@ import "./App.css";
 import Landing from "../src/pages/Landing";
 import { Routes, Route } from "react-router-dom";
 import Qu from "../src/pages/Qu";
-import Signup from "../src/pages/Signup";
+import Signup from "./Pages/Signup";
 import Card from "../src/Compnent/sataDisplay/Card";
 import Owner from "../src/pages/Owner";
 import OwnerApartment from "../src/pages/OwnerApartment";
@@ -15,6 +15,7 @@ import RequestAddBuilding from "../src/pages/RequestAddBuilding";
 import AddTenant from "../src/pages/AddTenant";
 import AddApartment from "../src/pages/AddApartment";
 import Profile from "../src/pages/Profile";
+import PaymentPage from "./Pages/PaymentPage";
 function App() {
   return (
     <div className="font-Arabic">
@@ -43,6 +44,8 @@ function App() {
         <Route path="/AddApartment" element={<AddApartment />} />{" "}
         {/* صفحة اضافة شقة */}
         <Route path="/Profile" element={<Profile />} /> {/* ملف التعريف */}
+        <Route path="/PaymentPage" element={<PaymentPage />} /> {/* صفحة دفع المستأجر  */}
+
       </Routes>}
 
       <div>
