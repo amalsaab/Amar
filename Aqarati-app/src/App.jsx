@@ -44,6 +44,8 @@ function App() {
         <Route path="/AddApartment" element={<AddApartment />} />{" "}
         {/* صفحة اضافة شقة */}
         <Route path="/Profile" element={<Profile />} /> {/* ملف التعريف */}
+        <Route path="/PaymentPage" element={<PaymentPage />} /> {/* صفحة دفع المستأجر  */}
+
       </Routes>}
 
       <div>
