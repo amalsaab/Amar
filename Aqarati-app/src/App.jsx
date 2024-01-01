@@ -19,16 +19,12 @@ import PaymentPage from "./Pages/PaymentPage";
 function App() {
   return (
     <div className="font-Arabic">
-      <Routes>
+      {<Routes>
         {/* For component testing */}
-        <Route path="/" element={<Landing />} /> {/* الصفحة الرئيسية */}
-        <Route path="/Qu" element={<Qu />} /> {/* الاسئلة الشائعة */}
         <Route path="/Owner" element={<Owner />} /> {/* صفحة عقارات المالك */}
-        <Route path="/Apartment" element={<Owner />} />
-        {/* <Route path="/Apartment" element={<OwnerApartment />} />{" "} */}
+        {/* <Route path="/Apartment" element={<Owner />} /> */}
+        <Route path="/Apartment" element={<OwnerApartment />} />{" "}
         {/* شقق العقار*/}
-        <Route path="/signup" element={<Signup />} /> {/*صفحة التسجيل  */}
-        <Route path="/login" element={<Login />} /> {/* صفحة الدخول  */}
         <Route path="/ApartmentHistory" element={<ApartmentHistory />} />{" "}
         {/* سجل صيانة الشقة */}
         <Route
@@ -48,10 +44,16 @@ function App() {
         <Route path="/AddApartment" element={<AddApartment />} />{" "}
         {/* صفحة اضافة شقة */}
         <Route path="/Profile" element={<Profile />} /> {/* ملف التعريف */}
+      </Routes>}
 
-        <Route path="/PaymentPage" element={<PaymentPage />} /> {/* صفحة دفع المستأجر  */}
-
-      </Routes>
+      <div>
+        <Routes>
+          <Route path="/" element={<Landing />} /> {/* الصفحة الرئيسية */}
+          <Route path="/Qu" element={<Qu />} /> {/* الاسئلة الشائعة */}
+          <Route path="/signup" element={<Signup />} /> {/*صفحة التسجيل  */}
+          <Route path="/login" element={<Login />} /> {/* صفحة الدخول  */}
+        </Routes>
+      </div>
     </div>
   );
 }
