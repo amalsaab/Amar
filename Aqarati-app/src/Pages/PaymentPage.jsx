@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function PaymentPage() {
+const PaymentPage = () => {
   return (
-<>
-
-</>
-    )
+    <div>
+        
+    </div>
+  )
 }
+
+export default PaymentPage
