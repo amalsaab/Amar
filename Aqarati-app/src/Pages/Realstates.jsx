@@ -3,9 +3,86 @@ import Card from "../../src/Compnent/sataDisplay/Card";
 import Aqar from "../.../../assets/aqar.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useViewPage } from "./store";
+import { db } from "../Compnent/dataInput/firebase";
+import { getAuth } from "firebase/auth";
+import { useEffect, useState } from "react";
+import { collection, query, where, getDocs } from "firebase/firestore";
+
+
 const Realstates = () => {
+
+  const [Namee, getName] = useState()
+  const [Age , getAge ] = useState()
+  const [Unit, getUnit] = useState()
+  const [cards, setCards] = useState([]);
+
+
+  let local = localStorage.getItem("UserName")
+  const q = query(collection(db, "UsersInfo"), where("UserName", "==", local));
+
+    
+
   const navigate = useNavigate();
   const { namePage, setNamePage } = useViewPage((state) => state);
+
+
+  {
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const querySnapshot = await getDocs(q);
+          let cardsArray = [];
+
+          querySnapshot.forEach((doc) => {
+            let preData = doc.data();
+            let Data = preData.RealState;
+    
+            Data.forEach((items) => {
+           
+              let Name = items.Name;
+              let Age = items.StateAge;
+              let Unit = items.Unit;
+              let city = items.city
+
+           
+              getName(Namee)
+
+              
+    
+              // Do something with Name, Age, and Unit here
+              let card = (
+                <Card Head={Name} Location={city} Age={Age+ " سنوات "} NumberofUnit={Unit} />
+                
+              );
+              
+  
+              cardsArray.push(card);
+            
+
+            });
+          });
+          setCards(cardsArray);
+
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+  
+      };
+    
+      fetchData();
+    }, [])
+    const handleButtonClick = (name) => {
+      // Handle button click event here
+      console.log(`Button clicked for ${name}`);
+    };
+  
+
+
+
+  }
+
+
+
   return (
     <div>
       <div className="flex w-full  items-center justify-center  ">
@@ -45,32 +122,20 @@ const Realstates = () => {
         </div>
       </div>
 
-      <div className=" flex gap-10 p-4 flex-wrap justify-center">
-        <Card
-          Head="شقق المتكاملة"
-          Location="الرياض، حي الوادي"
-          Age="10 سنوات"
-          NumberofUnit="20"
-        />
-        <Card
-          Head="شقق الكمال"
-          Location="الرياض، حي العليا"
-          Age="3 سنوات"
-          NumberofUnit="32"
-        />
-        <Card
-          Head="شقق ركن الانوار"
-          Location="الرياض، حي الملقا"
-          Age="سنتين"
-          NumberofUnit="2"
-        />
-        <Card
-          Head="شقق خير النزل"
-          Location="الرياض، حي الشفاء"
-          Age="سنة"
-          NumberofUnit="0"
-        />
+          {/* Middle of screen content */}
+          
+        
+      
+          
+
+
+      {/* Render the array of Card components */}
+      <div className="flex gap-10 flex-wrap p-5">
+      {cards }
+
       </div>
+    
+    
     </div>
   );
 };

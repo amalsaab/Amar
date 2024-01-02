@@ -11,8 +11,8 @@ function ApartmentCard(props) {
       <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-xl bg-clip-border rounded-xl w-96 outline outline-[#BBA98D] ">
         <div class="p-6 flex  justify-between">
           <div>
-            <h5 class="block mb-2 font-Arabic text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-              {props.Head}
+            <h5 class="block mb-2 font-Arabic text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 text-[2rem]">
+              رقم الشقة: {props.Head}
             </h5>
           </div>
           <img width={100} src={Aqar} alt="" />
@@ -24,11 +24,11 @@ function ApartmentCard(props) {
           </h1>
 
           <h1 class="block mb-2 font-Arabic text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-            اسم المستأجر: {props.Age}
+            اسم المستأجر: {props.TName}
           </h1>
           <h1 class="block mb-2 font-Arabic text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
             {" "}
-            رقم العداد: {props.NumberofUnit}
+            رقم العداد: {props.Enum}
           </h1>
         </div>
         <div class="p-6 pt-0 flex gap-4">

@@ -25,9 +25,11 @@ export default function Login() {
       if (username == userNameInDB && password == PassInDB &&State == "owner" ){
 
         // Nav to the owner page
+        localStorage.setItem("UserName", username)
         nav('/Owner')  
       }else if(username == userNameInDB && password == PassInDB &&State == "tenant"){
-        nav('/Owner')
+        // Nav to the tenant page
+        nav('/')
 
       }
 
