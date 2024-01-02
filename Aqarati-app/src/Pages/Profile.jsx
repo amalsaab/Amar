@@ -4,6 +4,7 @@ import Aqar from "../.../../assets/aqar.png";
 import { db } from "../Compnent/dataInput/firebase";
 import { getAuth } from "firebase/auth";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { collection, query, where, getDocs } from "firebase/firestore";
 
 
@@ -12,7 +13,7 @@ export default function Profile() {
   const [NID, getID] = useState()
   const [userName, getUserName] = useState()
   const [Email, getEmail] = useState()
-
+  const nav = useNavigate()
  
 
 
@@ -56,19 +57,17 @@ export default function Profile() {
       </div>
       <div className="bg-white outline outline-[#BBA98D]  flex flex-col justify-between items-center m-10 rounded-md p-10 ">
         <div className="flex flex-col justify-center items-center gap-5 max-sm:grid max-sm:grid-cols-1 ">
-          <div className=" w-full flex justify-between gap-5 ">
-            <label htmlFor="id">رقم الهوية:</label>
+          <div className=" w-full flex justify-center gap-5 ">
+            <label htmlFor="id" className="">رقم الهوية:</label>
             <p id="id">{NID}</p>
 
-            <label htmlFor="account">رقم الحساب:</label>
-            <p id="account">23456789123</p>
+           
           </div>
-          <div className=" w-full flex justify-between gap-5">
+          <div className=" w-full flex justify-center gap-5">
             <label htmlFor="email">البريد الإلكتروني:</label>
             <p id="email">{Email}</p>
 
-            <label htmlFor="phone">رقم الجوال:</label>
-            <p id="phone">23456789056</p>
+
           </div>
 
           <button className="px-2 py-1 bg-primary rounded-lg">رجوع</button>
@@ -77,7 +76,10 @@ export default function Profile() {
                   الدعم الفني
                 </button>
 
-                <button className="bg-[#BE6363] w-72 h-12 rounded-md text-white">
+                <button onClick={()=>{
+                  localStorage.clear()
+                  nav('/')
+                }} className="bg-[#BE6363] w-72 h-12 rounded-md text-white">
                   تسجيل الخروج
                 </button>
               </div>
