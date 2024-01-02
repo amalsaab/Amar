@@ -14,7 +14,8 @@ function Testing(props, name, age, unit, onButtonClick) {
     const handleButtonClick = () => {
       let Head = props.Head
       localStorage.setItem("UnitName",Head)
-      setNamePage('/OwnerApartment')
+      setNamePage('OwnerApartment')
+      navigate('/Owner')
 
     }
  

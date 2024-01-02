@@ -130,7 +130,10 @@ const Realstates = () => {
 
 
       {/* Render the array of Card components */}
+      <div className="flex gap-10 flex-wrap p-5">
       {cards }
+
+      </div>
     
     
     </div>
