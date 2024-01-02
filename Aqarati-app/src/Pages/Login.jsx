@@ -6,10 +6,23 @@ import { db } from "../Compnent/dataInput/firebase";
 import { getAuth } from "firebase/auth";
 import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import OwnerApartment from "../Pages/OwnerApartment";
+import { useViewPage } from "./store";
+
 
 export default function Login() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+
+  const { namePage, setNamePage } = useViewPage((state) => state);
+  const [selected, setSelected] = React.useState({
+    aqar: true,
+    tqar: false,
+    syan: false,
+    show: false,
+    profile: false,
+  });
+
 
   const nav = useNavigate()
   const singinbtn = async()=>{
@@ -29,7 +42,10 @@ export default function Login() {
         nav('/Owner')  
       }else if(username == userNameInDB && password == PassInDB &&State == "tenant"){
         // Nav to the tenant page
-        nav('/')
+        localStorage.setItem("UserName", username)
+        nav('/Owner')
+        setNamePage('OwnerApartment')
+
 
       }
 

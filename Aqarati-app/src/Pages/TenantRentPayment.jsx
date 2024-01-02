@@ -11,8 +11,8 @@ import Aqar from '../.../../assets/aqar.png'
     <div className='bg-white outline outline-[#BBA98D] flex justify-between items-center m-10 rounded-md w-full p-4'>
         
         <div className='flex flex-col' >
-            <h1 className='text-[2rem] font-bold  '>شقق المتكاملة</h1>
-            <h1>الرياض ، حي الوادي</h1>
+            <h1 className='text-[2rem] font-bold  '>شقق اصيل الملقا</h1>
+            <h1>الرياض ، حي الملقا</h1>
         </div>
         <div >
             <img width={150} src={Aqar} alt="" srcset="" />
@@ -27,8 +27,8 @@ import Aqar from '../.../../assets/aqar.png'
     <div className='bg-white outline outline-[#BBA98D] flex justify-between items-center m-10 rounded-md w-full p-4'>
         
         <div className='flex flex-col' >
-            <h1 className='text-[2rem] font-bold  '>شقة رقم 1 </h1>
-            <h1>اسم المستأجر : محمد الشمري</h1>
+            <h1 className='text-[2rem] font-bold  '>شقة رقم 101 </h1>
+            <h1>اسم المستأجر : علي الحربي</h1>
         </div>
        <div >
             <img width={150} src={Aqar} alt="" srcset="" />
