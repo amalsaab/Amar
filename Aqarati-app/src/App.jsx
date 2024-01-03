@@ -1,11 +1,11 @@
 import "./App.css";
-import Landing from "../src/pages/Landing";
+import Landing from "../src/Pages/Landing";
 import { Routes, Route } from "react-router-dom";
 import Qu from "../src/pages/Qu";
 import Signup from "./Pages/Signup";
 import Card from "../src/Compnent/sataDisplay/Card";
-import Owner from "../src/pages/Owner";
-import OwnerApartment from "../src/pages/OwnerApartment";
+import Owner from "../src/Pages/Owner";
+import OwnerApartment from "../src/Pages/OwnerApartment";
 import BottomNavigation from "../src/Compnent/navigation/BottomNavigation";
 import Login from "../src/pages/Login";
 import ApartmentHistory from "../src/pages/ApartmentHistory";
@@ -26,8 +26,14 @@ function App() {
         <Route path="/Owner" element={<Owner />} /> {/* صفحة عقارات المالك */}
         {/* <Route path="/Apartment" element={<Owner />} /> */}
 
-        <Route path="/Apartment" element={<Owner />} />{/* شقق العقار*/}
+
+
+        <Route path="/Apartment" element={<Owner />} />
+        
+        {/* شقق العقار*/}
         <Route path="/ApartmentHistory" element={<Owner />} />{/* سجل صيانة الشقة */}
+
+
 
         <Route
           path="/MaintenanceRequest"
@@ -48,8 +54,12 @@ function App() {
 
         <Route path="/PaymentPage" element={<PaymentPage />} /> {/* صفحة دفع المستأجر  */}
         <Route path="/ShowRequest" element={<ShowRequest />} /> {/* عرض الطلبات */}
-        <Route path="/TenantRentPayment" element={<TenantRentPayment />} /> {/* صفحة سداد المدفوعات للمستاجر*/}
+
         <Route path="/ViewRequest" element={<Owner />} />
+
+        <Route path="/TenantRentPayment" element={<Owner />} /> {/* صفحة سداد المدفوعات للمستاجر*/}
+
+
       </Routes>}
 
       <div>

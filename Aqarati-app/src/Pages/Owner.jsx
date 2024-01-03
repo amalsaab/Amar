@@ -1,12 +1,13 @@
 import React from "react";
 import Card from "../../src/Compnent/sataDisplay/Card";
-import OwnerApartment from "../pages/OwnerApartment";
+import OwnerApartment from "../Pages/OwnerApartment";
 import ApartmentHistory from "../pages/ApartmentHistory";
 import MaintenanceRequest from "../pages/MaintenanceRequest";
 import RentPayments from "../pages/RentPayments";
 import RequestAddBuilding from "../pages/RequestAddBuilding";
 import AddTenant from "../pages/AddTenant";
 import AddApartment from "../pages/AddApartment";
+import TenantRentPayment from './TenantRentPayment'
 import Profile from "../pages/Profile";
 import logo from "../assets/logo.svg";
 import Realstates from "../pages/Realstates";
@@ -51,6 +52,7 @@ function Owner() {
               Open
             </label>
             {/* Content */}
+
             {namePage === "Realstates" && <Realstates />} {/* <Realstates /> */}
             {namePage === "OwnerApartment" && <OwnerApartment />}{" "}
             {/* <OwnerApartment /> */}
@@ -68,6 +70,9 @@ function Owner() {
             {namePage === "Profile" && <Profile />} {/* <Profile /> */}
             {namePage === "ViewRequest" && <ViewRequest />}{" "}
             {/* <ViewRequest /> */}
+             {namePage === "TenantRentPayment" && <TenantRentPayment />}
+             
+
             {/* end the content */}
           </div>
           <div className="drawer-side">
@@ -101,7 +106,7 @@ function Owner() {
                         profile: false,
                       });
                       setNamePage("Realstates");
-                      navigate("/Apartment");
+                      navigate("/Owner");
                     }}
                   >
                     <svg

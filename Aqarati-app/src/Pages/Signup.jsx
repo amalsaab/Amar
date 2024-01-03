@@ -48,50 +48,51 @@ export default function Signup() {
 						  Password: password,
 						  State: selectedOption,
 						  RealState: [{
-							Name: "شقق المتكاملة",
-							city: "الرياض، حي الوادي",
+							Name: "شقق اصيل الملقا ",
+							city: "الرياض، حي الملقا",
 							StateAge: 3,
 							Unit: 30,
 							Units:[{
-								ApartmentNum: 5,
-								Tenant: "",
-								ContractNum: 3178,
-								Enum: 37286,
-								Payment: [{}],
-								maintenanis: [{}],
+								ApartmentNum: 101,
+								Tenant: "علي الحربي",
+								ContractNum: 213178,
+								Enum: 937286,
+								Payment: [{
+									ID:1,
+									Date:"1-1-2024",
+									Total: 15000,
+									State: "Paid"
+								},
+								{
+									ID:2,
+									Date:"1-6-2024",
+									Total: 15000,
+									State: "Not"
+								}
+							],
+								maintenanis: [{
+									ID:1,
+									Date:"10-9-2023",
+									Type: "ترميم داخلي"
+								},
+								{
+									ID:2,
+									Date:"23-9-2023",
+									Type: "سباكه مطبخ "
+								}
+
+							],
 
 							},
-							{
-								ApartmentNum: 1,
-								Tenant: "",
-								ContractNum: 7678,
-								Enum: 9286,
-								Payment: [{}],
-								maintenanis: [{}],
+							
 
-							},
-							{
-								ApartmentNum: 3,
-								Tenant: "",
-								ContractNum: 65178,
-								Enum: 8943286,
-								Payment: [{}],
-								maintenanis: [{}],
-
-							}
-						]
-						  },
-						  {
-							Name: "شقق المحبة",
-							city: "الرياض، حي العليا",
-							StateAge: 10,
-							Unit: 21
-						  }
+						  
 						
 						]
-					  }) 
-					  navg("/login");
+					  }] 
 				  })
+				  navg("/login");
+				})
     } else {
       
 
