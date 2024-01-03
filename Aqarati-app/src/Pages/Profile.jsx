@@ -21,9 +21,14 @@ export default function Profile() {
   const q = query(collection(db, "UsersInfo"), where("UserName", "==", local));
 
   
-  useEffect(async()=>{
+  useEffect(()=>{
 
-    const querySnapshot = await getDocs(q);
+    Fetch()
+
+  },[])
+  
+    async function Fetch() {
+      const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
           let Data = doc.data()
@@ -34,10 +39,7 @@ export default function Profile() {
 
 
         });
-
-  },[])
-  
-    
+    }
 
 
   return (

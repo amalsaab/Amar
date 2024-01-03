@@ -7,6 +7,7 @@ import RentPayments from "../pages/RentPayments";
 import RequestAddBuilding from "../pages/RequestAddBuilding";
 import AddTenant from "../pages/AddTenant";
 import AddApartment from "../pages/AddApartment";
+import TenantRentPayment from './TenantRentPayment'
 import Profile from "../pages/Profile";
 import logo from "../assets/logo.svg";
 import Realstates from "../pages/Realstates";
@@ -55,6 +56,7 @@ function Owner() {
             {namePage === "AddTenant" && <AddTenant />}
             {namePage === "AddApartment" && <AddApartment />}
             {namePage === "Profile" && <Profile />}
+            {namePage === "TenantRentPayment" && <TenantRentPayment />}
 
             {/* {"Realstates" && <Realstates />} */}
             {/* <Routes>
@@ -94,7 +96,7 @@ function Owner() {
                         profile: false,
                       });
                       setNamePage("Realstates");
-                      navigate("/Apartment");
+                      navigate("/Owner");
                     }}
                   >
                     <svg

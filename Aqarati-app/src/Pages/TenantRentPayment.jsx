@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Aqar from '../.../../assets/aqar.png'
  export default function TenantRentPayment(){
   return (
@@ -74,7 +75,14 @@ import Aqar from '../.../../assets/aqar.png'
         <th>2</th>
         <td>1-12-2023</td>
         <td>15000 ريال</td>
-        <td> <button className='bg-green-500 rounded-md px-2 p-1'>ادفع الان</button> </td>
+        <td>
+          <Link to='/PaymentPage'>
+    
+           <button
+
+        
+         className='bg-green-500 rounded-md px-2 p-1'>ادفع الان</button> 
+               </Link></td>
       </tr>
       {/* row 3 */}
       

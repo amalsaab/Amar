@@ -39,12 +39,15 @@ export default function Login() {
 
         // Nav to the owner page
         localStorage.setItem("UserName", username)
+        localStorage.setItem("UserState", State)
         nav('/Owner')  
       }else if(username == userNameInDB && password == PassInDB &&State == "tenant"){
         // Nav to the tenant page
         localStorage.setItem("UserName", username)
+        localStorage.setItem("UserState", State)
         nav('/Owner')
         setNamePage('OwnerApartment')
+
 
 
       }
