@@ -34,6 +34,12 @@ function ApartmentCard(props) {
         <div class="p-6 pt-0 flex gap-4">
           
             <button onClick={() => {
+
+
+                 let Head = props.Head
+                localStorage.setItem("UnitNum",Head)
+                let TName = props.TName
+                localStorage.setItem("TName", TName)
                 setNamePage("ApartmentHistory");
                 navigate("/ApartmentHistory");
               }}
@@ -46,6 +52,17 @@ function ApartmentCard(props) {
 
           
             <button
+            onClick={() => {
+              const userstate = localStorage.getItem("UserState")
+              if (userstate === "tenant") {
+                setNamePage("TenantRentPayment");
+              navigate("/TenantRentPayment");
+              }else{
+                setNamePage("RentPayments");
+                navigate("/RentPayments");
+              }
+              
+            }}
               class="flex items-center gap-2 px-4 py-2 font-Arabic text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-md select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20 outline outline-[#BBA98D]"
               type="button"
             >

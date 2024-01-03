@@ -37,7 +37,7 @@ function App() {
           path="/MaintenanceRequest"
           element={<MaintenanceRequest />}
         />{/* صفحة رفع طلب صيانة */}
-        <Route path="/RentPayments" element={<RentPayments />} />{/* صفحة جدول الدفعات */}
+        <Route path="/RentPayments" element={<Owner />} />{/* صفحة جدول الدفعات */}
         <Route
           path="/RequestAddBuilding"
           element={<Owner />}
@@ -52,7 +52,7 @@ function App() {
 
         <Route path="/PaymentPage" element={<PaymentPage />} /> {/* صفحة دفع المستأجر  */}
         <Route path="/ShowRequest" element={<ShowRequest />} /> {/* عرض الطلبات */}
-        <Route path="/TenantRentPayment" element={<TenantRentPayment />} /> {/* صفحة سداد المدفوعات للمستاجر*/}
+        <Route path="/TenantRentPayment" element={<Owner />} /> {/* صفحة سداد المدفوعات للمستاجر*/}
 
       </Routes>}
 

@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Aqar from '../.../../assets/aqar.png'
  export default function TenantRentPayment(){
   return (
@@ -11,8 +12,8 @@ import Aqar from '../.../../assets/aqar.png'
     <div className='bg-white outline outline-[#BBA98D] flex justify-between items-center m-10 rounded-md w-full p-4'>
         
         <div className='flex flex-col' >
-            <h1 className='text-[2rem] font-bold  '>شقق المتكاملة</h1>
-            <h1>الرياض ، حي الوادي</h1>
+            <h1 className='text-[2rem] font-bold  '>شقق اصيل الملقا</h1>
+            <h1>الرياض ، حي الملقا</h1>
         </div>
         <div >
             <img width={150} src={Aqar} alt="" srcset="" />
@@ -27,8 +28,8 @@ import Aqar from '../.../../assets/aqar.png'
     <div className='bg-white outline outline-[#BBA98D] flex justify-between items-center m-10 rounded-md w-full p-4'>
         
         <div className='flex flex-col' >
-            <h1 className='text-[2rem] font-bold  '>شقة رقم 1 </h1>
-            <h1>اسم المستأجر : محمد الشمري</h1>
+            <h1 className='text-[2rem] font-bold  '>شقة رقم 101 </h1>
+            <h1>اسم المستأجر : علي الحربي</h1>
         </div>
        <div >
             <img width={150} src={Aqar} alt="" srcset="" />
@@ -74,7 +75,14 @@ import Aqar from '../.../../assets/aqar.png'
         <th>2</th>
         <td>1-12-2023</td>
         <td>15000 ريال</td>
-        <td> <button className='bg-green-500 rounded-md px-2 p-1'>ادفع الان</button> </td>
+        <td>
+          <Link to='/PaymentPage'>
+    
+           <button
+
+        
+         className='bg-green-500 rounded-md px-2 p-1'>ادفع الان</button> 
+               </Link></td>
       </tr>
       {/* row 3 */}
       

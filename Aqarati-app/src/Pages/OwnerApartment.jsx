@@ -59,15 +59,6 @@ function OwnerApartment() {
 
               }
 
-              
-    
-              // Do something with Name, Age, and Unit here
-            
-              
-  
-           
-            
-
             });
           });
           setCards(cardsArray);

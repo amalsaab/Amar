@@ -53,10 +53,10 @@ export default function Signup() {
 							StateAge: 3,
 							Unit: 30,
 							Units:[{
-								ApartmentNum: 5,
-								Tenant: "ابراهيم الشمري",
-								ContractNum: 3178,
-								Enum: 37286,
+								ApartmentNum: 101,
+								Tenant: "علي الحربي",
+								ContractNum: 213178,
+								Enum: 937286,
 								Payment: [{
 									ID:1,
 									Date:"1-1-2024",
@@ -84,175 +84,15 @@ export default function Signup() {
 							],
 
 							},
-							{
-								ApartmentNum: 1,
-								Tenant: "عبدالمجيد القحطاني",
-								ContractNum: 7678,
-								Enum: 9286,
-								Payment: [
-									{
-										ID:1,
-										Date:"",
-										Total: "",
-										State: ""
-									},
-									{
-										ID:2,
-										Date:"",
-										Total: "",
-										State: ""
-									}
-								],
-								maintenanis: [
-									{
-										ID:1,
-										Date:"",
-										Type: "  "
-									},
-									{
-										ID:2,
-										Date:"",
-										Type: " "
-									}
-								],
+							
 
-							},
-							{
-								ApartmentNum: 3,
-								Tenant: "احمد ماهر",
-								ContractNum: 65178,
-								Enum: 8943286,
-								Payment: [{
-									ID:1,
-									Date:"1-1-2024",
-									Total: 2000,
-									State: "Paid"
-								},
-								{
-									ID:2,
-									Date:"1-2-2024",
-									Total: 2000,
-									State: "Paid"
-								},
-								{
-									ID:1,
-									Date:"1-3-2024",
-									Total: 2000,
-									State: "Not"
-								},
-								{
-									ID:2,
-									Date:"1-4-2024",
-									Total: 2000,
-									State: "Not"
-								}
-							],
-								maintenanis: [
-									{
-										ID:1,
-										Date:"10-2-2023",
-										Type: "صبغ بويه "
-									},
-									{
-										ID:2,
-										Date:"23-11-2023",
-										Type: "سباكه حمام "
-									}
-								],
-
-							}
-						]
-						  },
-						  {
-							Name: "شقق لمسات الخير",
-							city: "الرياض، حي الياسمين",
-							StateAge: 10,
-							Unit: 21,
-							Units:[{
-								ApartmentNum: 5,
-								Tenant: "فواز العجمي",
-								ContractNum: 3178,
-								Enum: 37286,
-								Payment: [
-									{
-										ID:1,
-										Date:"1-1-2024",
-										Total: 12000,
-										State: "Paid"
-									},
-									{
-										ID:2,
-										Date:"1-6-2024",
-										Total: 12000,
-										State: "Not"
-									}
-								],
-								maintenanis: [
-									{
-										ID:1,
-										Date:"10-9-2023",
-										Type: "ترميم داخلي"
-									},
-									{
-										ID:2,
-										Date:"23-9-2023",
-										Type: "سباكه مطبخ "
-									}
-								],
-
-							},
-							{
-								ApartmentNum: 1,
-								Tenant: "سعيد القحطاني",
-								ContractNum: 7678,
-								Enum: 9286,
-								Payment: [
-									{
-										ID:1,
-										Date:"1-1-2024",
-										Total: 7000,
-										State: "Paid"
-									},
-									{
-										ID:2,
-										Date:"1-6-2024",
-										Total: 7000,
-										State: "Not"
-									}
-								],
-								maintenanis: [{}],
-
-							},
-							{
-								ApartmentNum: 3,
-								Tenant: "عبدالله المزيني ",
-								ContractNum: 65178,
-								Enum: 8943286,
-								Payment: [
-									{
-										ID:1,
-										Date:"1-1-2024",
-										Total: 10000,
-										State: "Paid"
-									},
-									{
-										ID:2,
-										Date:"1-6-2024",
-										Total: 10000,
-										State: "Not"
-									}
-								],
-								maintenanis: [{}],
-
-							}
-							]
-
-						  }
+						  
 						
 						]
-					  }) 
-					  navg("/login");
+					  }] 
 				  })
+				  navg("/login");
+				})
     } else {
       
 
