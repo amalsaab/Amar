@@ -27,10 +27,12 @@ function App() {
         {/* <Route path="/Apartment" element={<Owner />} /> */}
 
 
+
         <Route path="/Apartment" element={<Owner />} />
         
         {/* شقق العقار*/}
         <Route path="/ApartmentHistory" element={<Owner />} />{/* سجل صيانة الشقة */}
+
 
 
         <Route
@@ -52,7 +54,11 @@ function App() {
 
         <Route path="/PaymentPage" element={<PaymentPage />} /> {/* صفحة دفع المستأجر  */}
         <Route path="/ShowRequest" element={<ShowRequest />} /> {/* عرض الطلبات */}
+
+        <Route path="/ViewRequest" element={<Owner />} />
+
         <Route path="/TenantRentPayment" element={<Owner />} /> {/* صفحة سداد المدفوعات للمستاجر*/}
+
 
       </Routes>}
 

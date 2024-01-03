@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { db } from "../Compnent/dataInput/firebase";
@@ -95,7 +96,9 @@ export default function RentPayments() {
 
 
   return (
-<>
+    <>
+      {/* content here */}
+
 
 {/* content here */}
 
@@ -107,8 +110,12 @@ export default function RentPayments() {
          
         </div>
         <div >
+
             <img width={150} src={Aqar} alt="" srcset="" />
+          </div>
         </div>
+      </div>
+
 
     </div>
 
@@ -123,8 +130,12 @@ export default function RentPayments() {
             <h1>اسم المستأجر :  {Tname}</h1>
         </div>
         <div >
+
             <img width={150} src={Aqar} alt="" srcset="" />
+          </div>
         </div>
+      </div>
+
 
     </div>
 

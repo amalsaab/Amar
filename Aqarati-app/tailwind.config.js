@@ -30,9 +30,9 @@ export default {
 
           info: "#00b6ff",
 
-          success: "#009b44",
+          success: "#4FC180",
 
-          warning: "#ffcd41",
+          warning: "#F4DD9C",
 
           error: "#BE6363",
         },
