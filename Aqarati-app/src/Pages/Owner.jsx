@@ -10,9 +10,15 @@ import AddApartment from "../pages/AddApartment";
 import Profile from "../pages/Profile";
 import logo from "../assets/logo.svg";
 import Realstates from "../pages/Realstates";
+import ViewRequest from "../pages/ViewRequest";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useViewPage } from "./store";
+import { useLocation } from "react-router-dom";
 function Owner() {
+  const location = useLocation();
+  // const history = useHistory();
+  console.log(location);
+  // console.log(history);
   // const setPage = () => {
   //   useViewPage.setState({ namePage: "Realstates" });
   // };
@@ -44,23 +50,24 @@ function Owner() {
             >
               Open
             </label>
-
             {/* Content */}
-            {namePage === "Realstates" && <Realstates />}
-            {namePage === "OwnerApartment" && <OwnerApartment />}
-            {namePage === "ApartmentHistory" && <ApartmentHistory />}
-            {namePage === "MaintenanceRequest" && <MaintenanceRequest />}
-            {namePage === "RentPayments" && <RentPayments />}
-            {namePage === "RequestAddBuilding" && <RequestAddBuilding />}
-            {namePage === "AddTenant" && <AddTenant />}
-            {namePage === "AddApartment" && <AddApartment />}
-            {namePage === "Profile" && <Profile />}
-
-            {/* {"Realstates" && <Realstates />} */}
-            {/* <Routes>
-              <Route path="Realstates" element={<Realstates />} />
-            </Routes> */}
-
+            {namePage === "Realstates" && <Realstates />} {/* <Realstates /> */}
+            {namePage === "OwnerApartment" && <OwnerApartment />}{" "}
+            {/* <OwnerApartment /> */}
+            {namePage === "ApartmentHistory" && <ApartmentHistory />}{" "}
+            {/* <ApartmentHistory /> */}
+            {namePage === "MaintenanceRequest" && <MaintenanceRequest />}{" "}
+            {/* <MaintenanceRequest /> */}
+            {namePage === "RentPayments" && <RentPayments />}{" "}
+            {/* <RentPayments /> */}
+            {namePage === "RequestAddBuilding" && <RequestAddBuilding />}{" "}
+            {/* <RequestAddBuilding /> */}
+            {namePage === "AddTenant" && <AddTenant />} {/* <AddTenant /> */}
+            {namePage === "AddApartment" && <AddApartment />}{" "}
+            {/* <AddApartment /> */}
+            {namePage === "Profile" && <Profile />} {/* <Profile /> */}
+            {namePage === "ViewRequest" && <ViewRequest />}{" "}
+            {/* <ViewRequest /> */}
             {/* end the content */}
           </div>
           <div className="drawer-side">
@@ -154,17 +161,17 @@ function Owner() {
 
                 <li className={selected.syan ? "bg-primary rounded-lg " : ""}>
                   <button
-                    onClick={
-                      () =>
-                        setSelected({
-                          aqar: false,
-                          tqar: false,
-                          syan: true,
-                          show: false,
-                          profile: false,
-                        })
-                      // setNamePage("");
-                    }
+                    onClick={() => {
+                      setSelected({
+                        aqar: false,
+                        tqar: false,
+                        syan: true,
+                        show: false,
+                        profile: false,
+                      });
+                      // setNamePage("ViewRequest");
+                      // navigate("/ViewRequest");
+                    }}
                   >
                     <svg
                       className="w-8 h-8"
@@ -189,15 +196,17 @@ function Owner() {
 
                 <li className={selected.show ? "bg-primary rounded-lg " : ""}>
                   <button
-                    onClick={() =>
+                    onClick={() => {
                       setSelected({
                         aqar: false,
                         tqar: false,
                         syan: false,
                         show: true,
                         profile: false,
-                      })
-                    }
+                      });
+                      setNamePage("ViewRequest");
+                      navigate("/ViewRequest");
+                    }}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -257,8 +266,6 @@ function Owner() {
                   </button>
                 </li>
               </div>
-
-              
             </ul>
           </div>
         </div>

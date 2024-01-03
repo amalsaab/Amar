@@ -6,3 +6,10 @@ export const useViewPage = create((set)=>({
         set(() => ({namePage: text}));
     },
 }))
+
+export const useViewContent = create((set)=>({
+    contentBox:"",
+    setContentBox: (text) => {
+        set(() => ({contentBox: text}));
+    },
+}))
