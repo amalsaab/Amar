@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import TableInfo from "./TableInfo";
 
+
 export default function ApartmentHistory() {
   let untiName = localStorage.getItem("UnitName")
   let untiNum = localStorage.getItem("UnitNum")
