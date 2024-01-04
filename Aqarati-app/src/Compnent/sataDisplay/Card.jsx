@@ -1,7 +1,7 @@
 import React from "react";
 import Aqar from "../../assets/aqar.png";
 import { useViewPage } from "../../pages/store.js";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Testing(props, name, age, unit, onButtonClick) {
@@ -15,7 +15,7 @@ function Testing(props, name, age, unit, onButtonClick) {
       let Head = props.Head
       localStorage.setItem("UnitName",Head)
       setNamePage('OwnerApartment')
-      navigate('/Owner')
+      navigate('/OwnerApartment')
 
     }
  
@@ -33,7 +33,7 @@ function Testing(props, name, age, unit, onButtonClick) {
               {props.Location}
             </p>
           </div>
-          <img width={100} src={Aqar} alt="" />
+          <img width={120} src={Aqar} alt="" />
         </div>
         <div class="p-6">
           <h1 class="block mb-2 font-Arabic text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">

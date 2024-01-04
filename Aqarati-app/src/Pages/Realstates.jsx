@@ -1,9 +1,9 @@
 import React from "react";
 import Card from "../../src/Compnent/sataDisplay/Card";
-import Aqar from "../.../../assets/aqar.png";
-import { Link, useNavigate } from "react-router-dom";
+// import Aqar from "../.../../assets/aqar.png";
+import { useNavigate } from "react-router-dom";
 import { useViewPage } from "./store";
-import {Auth, db } from "../Compnent/dataInput/firebase";
+import { db } from "../Compnent/dataInput/firebase";
 import { useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 
@@ -107,7 +107,7 @@ const Realstates = () => {
       {/* Middle of screen content */}
 
       {/* Render the array of Card components */}
-      <div className="flex gap-10 flex-wrap p-5">{cards}</div>
+      <div className="flex gap-10 flex-wrap justify-center p-5">{cards}</div>
     </div>
   );
 };

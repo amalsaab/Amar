@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Aqar from "../.../../assets/aqar.png";
 import { useState } from "react";
 import {Auth, db   } from "../Compnent/dataInput/firebase.js";

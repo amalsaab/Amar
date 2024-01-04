@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Aqar from "../.../../assets/aqar.png";
-import {Auth, db } from "../Compnent/dataInput/firebase";
+import { db } from "../Compnent/dataInput/firebase";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { collection, query, where, getDocs } from "firebase/firestore";
@@ -59,7 +59,7 @@ export default function Profile() {
             <p id="email">{Email}</p>
           </div>
 
-          <button className="px-2 py-1 bg-primary rounded-lg">رجوع</button>
+          {/* <button className="px-2 py-1 bg-primary rounded-lg">رجوع</button> */}
           <div className="flex gap-4">
             <button className=" w-72 h-12 rounded-md  bg-[#ffff] outline outline-[#BBA98D] text-black ">
               الدعم الفني
