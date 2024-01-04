@@ -28,7 +28,7 @@ function App() {
 
 
 
-        <Route path="/Apartment" element={<Owner />} />
+        <Route path="/OwnerApartment" element={<Owner />} />
         
         {/* شقق العقار*/}
         <Route path="/ApartmentHistory" element={<Owner />} />{/* سجل صيانة الشقة */}

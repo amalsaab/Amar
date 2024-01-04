@@ -1,7 +1,7 @@
 import React from "react";
 import Aqar from "../../assets/aqar.png";
 import { useViewPage } from "../../pages/store.js";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Testing(props, name, age, unit, onButtonClick) {
@@ -15,7 +15,7 @@ function Testing(props, name, age, unit, onButtonClick) {
       let Head = props.Head
       localStorage.setItem("UnitName",Head)
       setNamePage('OwnerApartment')
-      navigate('/Owner')
+      navigate('/OwnerApartment')
 
     }
  

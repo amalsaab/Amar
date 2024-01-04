@@ -1,9 +1,9 @@
 import React from "react";
 import ApartmentCard from "../../src/Compnent/sataDisplay/ApartmentCard";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import Aqar from "../../../assets/aqar.png";
-import Owner from "./Owner";
-import {Auth, db } from "../Compnent/dataInput/firebase";
+// import Owner from "./Owner";
+import { db } from "../Compnent/dataInput/firebase";
 import { useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 
