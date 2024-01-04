@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import bgsignup from "../assets/bgSignup1.png";
 import { useNavigate } from "react-router-dom";
 import {Auth, db } from "../Compnent/dataInput/firebase.js";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { collection, addDoc } from "firebase/firestore"; 
 
 export default function Signup() {
