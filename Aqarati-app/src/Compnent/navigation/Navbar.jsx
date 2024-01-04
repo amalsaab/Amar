@@ -4,11 +4,11 @@ import logo from '../../assets/whitelogo.svg'
 function Navbar() {
   return (
     <div>
-       <div className='flex justify-between w-[100vw] h-[7vh] p-10 items-center text-white bg-[#BBA98D]   '>
+       <div className='flex justify-between w-[100vw] h-[7vh] p-10 items-center text-white bg-[#BBA98D] max-sm:flex-col max-sm:h-full   '>
 
 
 
-<div className='flex items-center justify-around w-[30vw]  '>
+<div className='flex items-center justify-around w-[30vw]  max-sm:gap-10 max-md:gap-10  '>
 
 
     <Link to='/'>
