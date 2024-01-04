@@ -43,6 +43,7 @@ export default function Login() {
         // Nav to the tenant page
         localStorage.setItem("UserName", username);
         localStorage.setItem("UserState", State);
+
         // localStorage.setItem("UnitName", State);
 
         setNamePage("OwnerApartment");

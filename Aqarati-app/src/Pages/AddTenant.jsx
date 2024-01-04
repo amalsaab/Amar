@@ -1,7 +1,37 @@
 import React from "react";
 import Aqar from "../.../../assets/aqar.png";
-
+import { useState } from "react";
+import {Auth, db   } from "../Compnent/dataInput/firebase.js";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc, collection } from "firebase/firestore";
+import { update } from "../Compnent/dataInput/firebase.js";
 export default function AddTenant() {
+
+  const [TenName, setTenName] = useState()
+  const [ApartNum, SetNum] = useState()
+  const [ConNum, SetConNum] =useState()
+  const [FloorNum, setFloor] = useState()
+  const [ID, setID] = useState()
+
+
+  const Addtentbtn = ()=>{
+
+    db.collection("UsersInfo").doc("YIdj95zZMycWbqx1Tfu3").set({
+      Send: {
+        Type: "اسناد مستأجر",
+        ANum: ApartNum,
+        ContractNum: ConNum,
+        OwnerName:"محمد العبدالله",
+        Floor: FloorNum,
+        ID: ID
+      }
+    }).then(function() {
+      alert("Ahmed food updated");
+    });
+    
+  }
+  
+
   return (
     <>
       {/* content here */}
@@ -44,7 +74,9 @@ export default function AddTenant() {
             <label htmlFor="idLand" className="w-24">
               اسم المستأجر
             </label>
-            <input
+            <input 
+              value={TenName}
+              onChange={(e)=>{setTenName(e.target.value)}}
               className="outline outline-gray-200 rounded-md  w-48"
               type="text"
             />
@@ -53,6 +85,8 @@ export default function AddTenant() {
               رقم الهوية
             </label>
             <input
+               value={ID}
+               onChange={(e)=>{setID(e.target.value)}}           
               className="outline outline-gray-200 rounded-md w-48"
               type="text"
             />
@@ -70,6 +104,8 @@ export default function AddTenant() {
               رقم الشقة
             </label>
             <input
+                value={ApartNum}
+                 onChange={(e)=>{SetNum(e.target.value)}}
               className="outline outline-gray-200 rounded-md  w-48"
               type="text"
             />
@@ -80,6 +116,8 @@ export default function AddTenant() {
               رقم العقد
             </label>
             <input
+              value={ConNum}
+              onChange={(e)=>{SetConNum(e.target.value)}}            
               className="outline outline-gray-200 rounded-md  w-48"
               type="text"
             />
@@ -88,12 +126,14 @@ export default function AddTenant() {
               رقم الطابق
             </label>
             <input
+              value={FloorNum}
+              onChange={(e)=>{setFloor(e.target.value)}}            
               className="outline outline-gray-200 rounded-md  w-48"
               type="text"
             />
           </div>
 
-          <button className="px-2 py-1 bg-primary rounded-lg">ارسال</button>
+          <button onClick={Addtentbtn} className="px-2 py-1 bg-primary rounded-lg">ارسال</button>
         </div>
       </div>
     </>
