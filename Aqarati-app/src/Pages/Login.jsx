@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import bgsignup from "../assets/bgSignup1.png";
-import { Link } from "react-router-dom";
-import { doc, getDoc } from "firebase/firestore";
-import {Auth, db } from "../Compnent/dataInput/firebase";
+// import { Link } from "react-router-dom";
+// import { doc, getDoc } from "firebase/firestore";
+import { db } from "../Compnent/dataInput/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import OwnerApartment from "../pages/OwnerApartment";
+// import OwnerApartment from "../pages/OwnerApartment";
 import { useViewPage } from "./store";
 
 export default function Login() {
@@ -13,13 +13,7 @@ export default function Login() {
   const [password, setPassword] = useState();
 
   const { namePage, setNamePage } = useViewPage((state) => state);
-  const [selected, setSelected] = React.useState({
-    aqar: true,
-    tqar: false,
-    syan: false,
-    show: false,
-    profile: false,
-  });
+
 
   const nav = useNavigate();
   const singinbtn = async () => {
@@ -39,6 +33,7 @@ export default function Login() {
         // Nav to the owner page
         localStorage.setItem("UserName", username);
         localStorage.setItem("UserState", State);
+        setNamePage("Realstates");
         nav("/Owner");
       } else if (
         username == userNameInDB &&
@@ -48,9 +43,12 @@ export default function Login() {
         // Nav to the tenant page
         localStorage.setItem("UserName", username);
         localStorage.setItem("UserState", State);
-        setNamePage("OwnerApartment");
-        nav("/Owner");
 
+        // localStorage.setItem("UnitName", State);
+
+        setNamePage("OwnerApartment");
+        nav("/OwnerApartment");
+        
       }
     });
   };

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect} from "react";
 import bg1 from "../assets/bg1.png";
 import line from "../assets/line.png";
 import step1 from "../assets/step1.png";
@@ -198,7 +198,7 @@ function Landing() {
             </h1>
             <img src={line} width={100} alt="" />
             <p id="description" className="w-[40vw] text-right text-[1.7rem]">
-              يعزز (اسم الموقع) للمستأجرين تجربة الإيجار بتوفير إمكانية الدفع
+              يقدم عمَار للمستأجرين تجربةإيجار فريدة بتوفير إمكانية الدفع
               الإلكتروني ومشاهدة مواعيد الدفعات. كما يُيسّر طلب الصيانة، ويوفر
               معلومات شاملة حول العقار.{" "}
             </p>
@@ -320,7 +320,7 @@ function Landing() {
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
             </div>
-            <div className="collapse-content">
+            <div className="collapse-content bg-accent pt-3">
               <p>طرق السداد المتفورة حاليا هي: ابل باي وبطاقة مدى</p>
             </div>
           </div>
@@ -332,7 +332,7 @@ function Landing() {
             <div className="collapse-title text-xl font-medium">
               كم يستغرق وقت قبول عقاري؟
             </div>
-            <div className="collapse-content">
+            <div className="collapse-content bg-accent pt-3">
               <p>حوالي يوم او يومي عمل</p>
             </div>
           </div>
@@ -344,7 +344,7 @@ function Landing() {
             <div className="collapse-title text-xl font-medium">
               ماهي الفئات المستهدفة
             </div>
-            <div className="collapse-content">
+            <div className="collapse-content bg-accent pt-3">
               <p>جميع من يملك عقار يريد تأجيره وجميع مستأجرين العقار</p>
             </div>
           </div>

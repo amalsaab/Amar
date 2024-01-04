@@ -12,9 +12,11 @@ import Profile from "../pages/Profile";
 import logo from "../assets/logo.svg";
 import Realstates from "../pages/Realstates";
 import ViewRequest from "../pages/ViewRequest";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useViewPage } from "./store";
 import { useLocation } from "react-router-dom";
+import menu from "../assets/menu.png";
+
 function Owner() {
   const location = useLocation();
   // const history = useHistory();
@@ -42,14 +44,14 @@ function Owner() {
       <div>
         <div className="drawer lg:drawer-open">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle " />
-          <div className="drawer-content w-full h-full DashboredBG"></div>
+          <div className="drawer-content w-full h-full  DashboredBG"></div>
           <div className="drawer-content items-center justify-center  ">
             {/* Page content here */}
             <label
               htmlFor="my-drawer-2"
               className="btn btn-primary drawer-button lg:hidden"
             >
-              Open
+              <img className="w-[2rem]" src={menu} alt="" />
             </label>
             {/* Content */}
 
