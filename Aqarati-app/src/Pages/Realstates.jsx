@@ -107,7 +107,7 @@ const Realstates = () => {
       {/* Middle of screen content */}
 
       {/* Render the array of Card components */}
-      <div className="flex gap-10 flex-wrap p-5">{cards}</div>
+      <div className="flex gap-10 flex-wrap justify-center p-5">{cards}</div>
     </div>
   );
 };

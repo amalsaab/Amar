@@ -320,7 +320,7 @@ function Landing() {
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
             </div>
-            <div className="collapse-content">
+            <div className="collapse-content bg-accent pt-3">
               <p>طرق السداد المتفورة حاليا هي: ابل باي وبطاقة مدى</p>
             </div>
           </div>
@@ -332,7 +332,7 @@ function Landing() {
             <div className="collapse-title text-xl font-medium">
               كم يستغرق وقت قبول عقاري؟
             </div>
-            <div className="collapse-content">
+            <div className="collapse-content bg-accent pt-3">
               <p>حوالي يوم او يومي عمل</p>
             </div>
           </div>
@@ -344,7 +344,7 @@ function Landing() {
             <div className="collapse-title text-xl font-medium">
               ماهي الفئات المستهدفة
             </div>
-            <div className="collapse-content">
+            <div className="collapse-content bg-accent pt-3">
               <p>جميع من يملك عقار يريد تأجيره وجميع مستأجرين العقار</p>
             </div>
           </div>

@@ -59,7 +59,7 @@ export default function Profile() {
             <p id="email">{Email}</p>
           </div>
 
-          <button className="px-2 py-1 bg-primary rounded-lg">رجوع</button>
+          {/* <button className="px-2 py-1 bg-primary rounded-lg">رجوع</button> */}
           <div className="flex gap-4">
             <button className=" w-72 h-12 rounded-md  bg-[#ffff] outline outline-[#BBA98D] text-black ">
               الدعم الفني
