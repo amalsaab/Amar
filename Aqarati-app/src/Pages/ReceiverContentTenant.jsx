@@ -2,7 +2,7 @@ import React from 'react'
 import {Auth, db   } from "../Compnent/dataInput/firebase.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc, collection,updateDoc, arrayUnion } from "firebase/firestore";
-import { update } from "../Compnent/dataInput/firebase.js";
+// import { update } from "../Compnent/dataInput/firebase.js";
 import { useNavigate } from 'react-router-dom';
 const ReceiverContentTenant = (probs) => {
   const nav = useNavigate()

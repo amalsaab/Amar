@@ -4,7 +4,7 @@ import { useState } from "react";
 import {Auth, db   } from "../Compnent/dataInput/firebase.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc, collection,updateDoc, arrayUnion } from "firebase/firestore";
-import { update } from "../Compnent/dataInput/firebase.js";
+// import { update } from "../Compnent/dataInput/firebase.js";
 export default function AddTenant() {
 
   const [TenName, setTenName] = useState()
