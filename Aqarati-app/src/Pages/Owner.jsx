@@ -129,7 +129,7 @@ function Owner() {
                     </p>
                   </button>
                 </li>
-                <li className={selected.tqar ? "bg-primary rounded-lg " : ""}>
+                {/* <li className={selected.tqar ? "bg-primary rounded-lg " : ""}>
                   <button
                     onClick={() => {
                       setSelected({
@@ -197,7 +197,7 @@ function Owner() {
                       الصيانة
                     </p>
                   </button>
-                </li>
+                </li> */}
 
                 <li className={selected.show ? "bg-primary rounded-lg " : ""}>
                   <button

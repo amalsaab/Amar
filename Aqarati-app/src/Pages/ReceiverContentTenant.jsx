@@ -1,6 +1,21 @@
 import React from 'react'
-
+import {Auth, db   } from "../Compnent/dataInput/firebase.js";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc, collection,updateDoc, arrayUnion } from "firebase/firestore";
+import { update } from "../Compnent/dataInput/firebase.js";
+import { useNavigate } from 'react-router-dom';
 const ReceiverContentTenant = (probs) => {
+  const nav = useNavigate()
+
+  const addbtn = async ()=>{
+
+    nav('/Owner')
+    
+ 
+
+    
+    
+  }
   return (
     <div>
         <div className="flex flex-col text-xl p-3 gap-2 border-l-2">
@@ -17,7 +32,9 @@ const ReceiverContentTenant = (probs) => {
             <div className="">
               {probs.RequestStatus === "" && (
                 <div className="flex gap-3">
-                  <button className="bg-accent py-2 w-24 rounded-lg text-center text-gray-600">
+                  <button
+                  onClick={addbtn}
+                   className="bg-accent py-2 w-24 rounded-lg text-center text-gray-600">
                     <div>قبول</div>
                   </button>
                   <button className="bg-primary py-2 w-24 rounded-lg text-center text-gray-600">

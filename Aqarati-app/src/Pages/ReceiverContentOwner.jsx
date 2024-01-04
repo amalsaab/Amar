@@ -1,6 +1,12 @@
 import React from "react";
 
 const ReceiverContentOwner = (probs) => {
+
+
+
+  const Addaprt = ()=>{
+    
+  }
   return (
     <div>
       <div className="flex flex-col text-xl p-3 gap-2 border-l-2">
@@ -17,7 +23,9 @@ const ReceiverContentOwner = (probs) => {
             <div className="">
               {probs.RequestStatus === "" && (
                 <div className="flex gap-3">
-                  <button className="bg-accent py-2 w-24 rounded-lg text-center text-gray-600">
+                  <button 
+                  onClick={Addaprt}
+                  className="bg-accent py-2 w-24 rounded-lg text-center text-gray-600">
                     <div>قبول</div>
                   </button>
                   <button className="bg-primary py-2 w-24 rounded-lg text-center text-gray-600">
