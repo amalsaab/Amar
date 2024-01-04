@@ -2,9 +2,60 @@ import React, { useState } from 'react'
 import filtter from "../assets/filtter.svg";
 import ReceiverContentOwner from "../pages/ReceiverContentOwner";
 import ReceiverContentTenant from "../pages/ReceiverContentTenant";
+import {Auth, db } from "../Compnent/dataInput/firebase";
+import { useEffect } from "react";
+import { collection, query, where, getDocs } from "firebase/firestore";
 
 const ReceiverPage = () => {
     const [requestType, setRequestType] = useState("الكل");
+    const [cards, setCards] = useState([]);
+
+    let local = localStorage.getItem("UserName");
+    const q = query(collection(db, "UsersInfo"), where("UserName", "==", local));
+
+    {
+      useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const querySnapshot = await getDocs(q);
+            let cardsArray = [];
+  
+            querySnapshot.forEach((doc) => {
+              let preData = doc.data();
+              let Data = preData.Send;
+  
+              Data.forEach((items) => {
+                console.log(items);
+                let Type = items.Type
+                let State = items.State
+                let Num = items.ANum
+                let ConNum = items.ContractNum
+                let OName = items.OwnerName
+                let Floor = items.Floor
+                
+  
+                let card = (
+                  <ReceiverContentOwner
+                  RequestType={Type}
+                  RequestName={State}
+                  RequestStatus=""
+                />
+                  );
+  
+                cardsArray.push(card);
+              });
+            });
+            setCards(cardsArray);
+          } catch (error) {
+            console.error("Error fetching data:", error);
+          }
+        };
+  
+        fetchData();
+      }, []);
+    }
+
+
   return (
     <div>
         {/* filter here */}
@@ -29,29 +80,14 @@ const ReceiverPage = () => {
         {
             <div className="divide-y divide-slate-300">
               {/* Owner */}
-              <ReceiverContentOwner
-                RequestType="إصلاح عمارة"
-                RequestName="اصلاح سباكة"
-                RequestStatus=""
-              />
-              <ReceiverContentOwner
-                RequestType="إصلاح شقة"
-                RequestName="اصلاح مصعد كهربائي"
-                RequestStatus="مقبول"
-              />
-              <ReceiverContentOwner
-                RequestType="إضافة عقار"
-                RequestName="اصلاح مصعد كهربائي"
-                RequestStatus="مرفوض"
-              />
+           
+            
             </div>
           }
           {
             <div className="divide-y divide-slate-300">
               {/* Tenant */}
-              <ReceiverContentTenant ApartmentNumber="1" InstrumentNumber="123456789" OwnerName="محمد العبدالله" FloorNumber="2" RequestStatus=""/>
-              <ReceiverContentTenant ApartmentNumber="1" InstrumentNumber="123456789" OwnerName="محمد العبدالله" FloorNumber="2" RequestStatus="مقبول"/>
-              <ReceiverContentTenant ApartmentNumber="1" InstrumentNumber="123456789" OwnerName="محمد العبدالله" FloorNumber="2"RequestStatus="مرفوض"/>
+              {cards}
             </div>
           }
       </div>

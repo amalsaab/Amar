@@ -46,6 +46,24 @@ export default function Signup() {
 						  Email: email,
 						  Password: password,
 						  State: selectedOption,
+              Send:[
+                {
+                  ID:1,
+                  Type: "توثيق شقة",
+                  ANum: 3,
+                  ContractNum: 11837402,
+                  OwnerName: "محمد العبدالله",
+                  Floor: 2,
+                 
+                }
+              ],
+              Req: [{
+                ID:1,
+                Type: "اصلاح شقة",
+                State: "مقبول",
+                Detail:"سباكة",
+                Date: "2023-10-3"
+              }],
 						  RealState: [{
 							Name: "شقق اصيل الملقا ",
 							city: "الرياض، حي الملقا",
@@ -53,7 +71,7 @@ export default function Signup() {
 							Unit: 30,
 							Units:[{
 								ApartmentNum: 101,
-								Tenant: "علي الحربي",
+								Tenant: "احمد الحربي",
 								ContractNum: 213178,
 								Enum: 937286,
 								Payment: [{
