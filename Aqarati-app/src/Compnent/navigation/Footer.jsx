@@ -3,7 +3,7 @@ import logo from '../../assets/whitelogo.svg'
 function Footer() {
   return (
     <div>
-      <div className="flex justify-between bg-[#BBA98D] p-6 max-sm:flex-col max-md:flex-col ">
+      <div className="flex justify-between bg-[#BBA98D] p-6 max-sm:flex-col max-md:flex-col max-sm:items-center">
         <div className="flex items-center p-10 ">
           {/* <h1 className="text-[3rem]">Logo</h1> */}
           <img className="h-36" src={logo} alt="" />

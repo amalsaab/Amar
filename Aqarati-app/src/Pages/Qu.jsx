@@ -9,11 +9,11 @@ function Qu() {
         <h1 className="text-[3rem]">الاسئلة الشائعة</h1>
       </div>
 
-      <div className="flex  bg-[#F6F6F6] p-10 ">
-        <div className="flex flex-col w-[93vw]  items-start justify-center gap-8">
+      <div className="flex justify-center items-center  bg-[#F6F6F6] p-10 ">
+        <div className="flex flex-col w-[80vw]  items-center justify-center gap-8">
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D]  "
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -24,7 +24,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right "
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -35,7 +35,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right"
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -46,7 +46,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right"
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -57,7 +57,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right"
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -68,7 +68,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right"
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -79,7 +79,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right"
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -90,7 +90,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right"
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -101,7 +101,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right"
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -112,7 +112,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right"
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -123,7 +123,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right"
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -134,7 +134,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right"
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -145,7 +145,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right"
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟
@@ -156,7 +156,7 @@ function Qu() {
           </div>
           <div
             tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[50vw]"
+            className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right "
           >
             <div className="collapse-title text-xl font-medium">
               ماهي طرق السداد المتوفرة ؟

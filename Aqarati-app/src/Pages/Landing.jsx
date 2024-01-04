@@ -28,6 +28,7 @@ function Landing() {
   const [step4para, updatestep4para] = useState(
     "يمكنك الان الدفع عن طريق المنصه باكثر من طريقة دفع ورؤية كل من الدفعات السابقه والقدمه"
   );
+  const [clickedUs, setClickedUs] = useState("المستأجر");
 
   const RenterClicked = () => {
     updatestep1("تسجيل حساب جديد");
@@ -42,6 +43,7 @@ function Landing() {
     updatestep4para(
       "يمكنك الان الدفع عن طريق المنصه باكثر من طريقة دفع ورؤية كل من الدفعات السابقه والقدمه"
     );
+    setClickedUs("المستأجر");
   };
 
   const ownerClicked = () => {
@@ -58,6 +60,7 @@ function Landing() {
       "ادارة العقارات الخاصه بك مع امكانيه اسناد مستأجر لكل عقار واضافة صيانه "
     );
     updatestep4para("رفع الحساب البنكي ليتم تحويل مبالغ الدفع بكل دوري");
+    setClickedUs("المالك");
   };
 
   const DealerCliked = () => {
@@ -74,6 +77,7 @@ function Landing() {
       "ادارة العقارات الخاصه بك مع امكانيه اسناد مستأجر لكل عقار واضافة صيانه "
     );
     updatestep4para("رفع الحساب البنكي ليتم تحويل مبالغ الدفع بكل دوري");
+    setClickedUs('الوسيط')
   };
 
   const [activeSlide, setActiveSlide] = useState(1);
@@ -159,7 +163,7 @@ function Landing() {
         >
           <img src={bg1} alt="Slide 2" className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/6 left-200 right-5 top-1/2">
-            <h1 className="text-white text-[3rem] w-[50vw] text-right">
+            <h1 className="text-white text-[3rem] w-[50vw] text-right max-sm:text-center">
               نوفر لكم خدمات إدارة الإيجار بكفاءة وسهولة، يتيح لك تأجير ممتلكاتك
               بثقة ويعنى بجميع جوانب العملية الإدارية
             </h1>
@@ -196,18 +200,17 @@ function Landing() {
             <h1 id="title" className="text-[3rem] max-sm:text-[2.4rem]">
               المستأجر
             </h1>
-            <img src={line} width={100} alt="" />
+            <img className="w-[6rem] h-[6rem] max-sm:w-[2rem] max-sm:h-[2rem]" src={line} width={100} alt="" />
 
-            <p id="description" className="w-[40vw] text-right text-[1.7rem] max-sm:text-[1.4rem] max-sm:w-full p-3 max-md:text-[1.3rem]">
+            <p id="description" className="w-[40vw] text-right text-[1.7rem] max-sm:text-[1.4rem] max-sm:w-full p-8 max-md:text-[1.3rem] ">
               يقدم عمَار للمستأجرين تجربةإيجار فريدة بتوفير إمكانية الدفع
-
               الإلكتروني ومشاهدة مواعيد الدفعات. كما يُيسّر طلب الصيانة، ويوفر
               معلومات شاملة حول العقار.{" "}
             </p>
           </div>
         </div>
         <div className="pt-20 flex gap-10 w-full  justify-center ">
-          <div className="bg-[#D9D9D9] flex gap-10 rounded-full w-[13vw] h-[5vh] justify-center  items-center max-sm:w-full max-md:w-64  ">
+          <div className="bg-[#D9D9D9] flex gap-10 rounded-full w-64 h-[5vh] justify-center  items-center max-sm:w-64 max-md:w-64  ">
             <button
               id="m1"
               onClick={changetoM1}
@@ -237,7 +240,7 @@ function Landing() {
 
       {/* Journy start */}
 
-      <div className=" bg-[#F6F6F6]">
+      <div className=" bg-[#F6F6F6] py-5">
         <div className="flex  items-end justify-center ">
           <h1 className="text-[3rem] max-sm:text-[2rem]">رحلتك في عقارك</h1>
         </div>
@@ -245,24 +248,24 @@ function Landing() {
         <div className="flex w-[100vw] h-[10vh] items-end justify-center max-sm:h-full max-md:my-10 ">
           <div className="join ">
             <div className="pt-20 flex gap-10 w-[100vw]  justify-center ">
-              <div className="bg-[#D9D9D9] flex gap-10 rounded-full  justify-center  items-center max-sm:flex-col  max-sm:h-full  ">
+              <div className="bg-[#D9D9D9] flex gap-10 rounded-full  justify-center  items-center   max-sm:h-full  ">
                 <button
                   onClick={RenterClicked}
-                  className="btn btn-sm bg-[#BBA98D]  rounded-full"
+                  className={clickedUs === "المستأجر" ?"btn btn-sm bg-[#BBA98D]  rounded-full":"btn btn-sm bg-[#CAC8C8]   rounded-full"}
                 >
                   {" "}
                   المستأجر
                 </button>
                 <button
                   onClick={ownerClicked}
-                  className="btn btn-sm bg-[#CAC8C8]   rounded-full"
+                  className={clickedUs === "المالك" ?"btn btn-sm bg-[#BBA98D]  rounded-full":"btn btn-sm bg-[#CAC8C8]   rounded-full"}
                 >
                   {" "}
                   مالك العقار{" "}
                 </button>
                 <button
                   onClick={DealerCliked}
-                  className="btn btn-sm bg-[#CAC8C8]  rounded-full "
+                  className={clickedUs === "الوسيط" ?"btn btn-sm bg-[#BBA98D]  rounded-full":"btn btn-sm bg-[#CAC8C8]   rounded-full"}
                 >
                   {" "}
                   وسيط عقاري
@@ -275,9 +278,9 @@ function Landing() {
         <div>
           <div className="flex items-end justify-end">
             <div className="w-[90vw] flex flex-col gap-10 items-start justify-center ">
-              <div className="flex justify-end items-center  max-sm:flex-col  ">
+              <div className="flex max-sm:flex-col justify-end items-center max-sm:items-center  ">
                 <img width={300} src={step1} alt="" />
-                <div className="w-[30vw] max-sm:w-full">
+                <div className="w-[30vw] max-sm:w-[20rem]  max-sm:text-center">
                   <h1 className="font-bold text-[2rem]">{step1state}</h1>
                   <p>{step1para}</p>
                 </div>
@@ -285,7 +288,7 @@ function Landing() {
 
               <div className="flex justify-center items-center max-sm:flex-col ">
                 <img width={300} src={step2} alt="" />
-                <div className="w-[30vw] max-sm:w-full">
+                <div className="w-[30vw] max-sm:w-[20rem] max-sm:text-center">
                   <h1 className="font-bold text-[2rem]"> {step2state}</h1>
                   <p>{step2para}</p>
                 </div>
@@ -293,7 +296,7 @@ function Landing() {
 
               <div className="flex justify-center items-center max-sm:flex-col ">
                 <img width={300} src={step3} alt="" />
-                <div className="w-[30vw max-sm:w-full]">
+                <div className="w-[30vw] max-sm:w-[20rem] max-sm:text-center">
                   <h1 className="font-bold text-[2rem]"> {step3state}</h1>
                   <p>{step3para}</p>
                 </div>
@@ -301,7 +304,7 @@ function Landing() {
 
               <div className="flex justify-center items-center max-sm:flex-col">
                 <img width={300} src={step4} alt="" />
-                <div className="w-[30vw] max-sm:w-full">
+                <div className=" max-sm:w-[20rem] max-sm:text-center">
                   <h1 className="font-bold text-[2rem]"> {step4state}</h1>
                   <p>{step4para}</p>
                 </div>
@@ -313,8 +316,8 @@ function Landing() {
 
       {/* Comman Quatuins start here */}
 
-      <div className="flex w-[100vw] h-[90vh] max-sm:flex-col max-md:flex-col max-md:items-center">
-        <div className="flex flex-col w-[60vw] h-[90vh] gap-2 items-center justify-center max-sm:w-full ">
+      <div className="flex w-[100vw] max-sm:flex-col max-md:flex-col max-md:items-center">
+        <div className="flex flex-col w-[60vw] p-10 gap-2 items-center justify-center max-sm:w-full ">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[30vw] max-sm:w-full max-md:w-full "
@@ -351,16 +354,16 @@ function Landing() {
             </div>
           </div>
 
-          <div className="flex h-[5vh] items-end justify-end w-[29vw]  ">
-            <Link to="/Qu">
-              <button className="w-[8vw] h-[4vh] rounded-sm bg-[#ffff] outline outline-[#BBA98D] text-black max-sm:w-full max-md:w-full">
+          <div className="flex h-[5vh] items-end justify-end   ">
+            
+              <Link to="/Qu" className="btn btn-outline btn-primary w-32 btn-sm ">
                 عرض المزيد
-              </button>
-            </Link>
+              </Link>
+            
           </div>
         </div>
 
-        <div className="flex h-[90vh] items-center">
+        <div className="flex w-[23rem] items-center">
           <img src={Qimg} alt="" />
         </div>
       </div>
