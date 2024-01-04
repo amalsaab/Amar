@@ -3,22 +3,22 @@ import logo from '../../assets/whitelogo.svg'
 function Footer() {
   return (
     <div>
-      <div className="flex justify-between bg-[#BBA98D] p-6">
-        <div className="flex items-center p-10">
+      <div className="flex justify-between bg-[#BBA98D] p-6 max-sm:flex-col max-md:flex-col ">
+        <div className="flex items-center p-10 ">
           {/* <h1 className="text-[3rem]">Logo</h1> */}
           <img className="h-36" src={logo} alt="" />
         </div>
 
 
-          <div className="flex w-[60vw]  justify-around items-center text-right">
-            <div className="flex flex-col gap-3">
-              <h1 className="text-[1.5rem]"> الخدمات</h1>
+          <div className="flex w-[60vw]  justify-around items-center text-right   ">
+            <div className="flex flex-col gap-3 ">
+              <h1 className="text-[1.5rem] max-sm:text-[1rem]"> الخدمات</h1>
               <h1> طرق الدفع</h1>
               <h1>الاسئلة الشائعة</h1>
             </div>
 
             <div className="flex flex-col gap-3">
-              <h1 className="text-[1.5rem]">اسم الموقع</h1>
+              <h1 className="text-[1.5rem] max-sm:text-[1rem]">عمار </h1>
               <h1>عن موقعنا</h1>
               <h1>الفريق</h1>
             </div>
