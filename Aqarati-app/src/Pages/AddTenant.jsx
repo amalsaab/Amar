@@ -3,7 +3,7 @@ import Aqar from "../.../../assets/aqar.png";
 import { useState } from "react";
 import {Auth, db   } from "../Compnent/dataInput/firebase.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc, collection } from "firebase/firestore";
+import { doc, setDoc, collection,updateDoc, arrayUnion } from "firebase/firestore";
 import { update } from "../Compnent/dataInput/firebase.js";
 export default function AddTenant() {
 
@@ -14,20 +14,21 @@ export default function AddTenant() {
   const [ID, setID] = useState()
 
 
-  const Addtentbtn = ()=>{
+  const Addtentbtn =async ()=>{
 
-    db.collection("UsersInfo").doc("YIdj95zZMycWbqx1Tfu3").set({
-      Send: {
-        Type: "اسناد مستأجر",
-        ANum: ApartNum,
-        ContractNum: ConNum,
-        OwnerName:"محمد العبدالله",
-        Floor: FloorNum,
-        ID: ID
-      }
-    }).then(function() {
-      alert("Ahmed food updated");
-    });
+    let Send = {
+      Type: "اسناد مستأجر",
+      ANum: ApartNum,
+      ContractNum: ConNum,
+      OwnerName:"محمد العبدالله",
+      Floor: FloorNum,
+      ID: ID
+    }
+
+   await updateDoc(doc(db,"UsersInfo", "YIdj95zZMycWbqx1Tfu3"),{
+    Send: arrayUnion(Send)
+   })
+    
     
   }
   

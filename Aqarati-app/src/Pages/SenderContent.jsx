@@ -42,7 +42,7 @@ const SenderContent = () => {
               
 
               // Do something with Name, Age, and Unit here
-              if(Type == "توثيق عقار"){
+              if(Type == "توثيق عقار" ){
 
                 let card = (
                   <SenderContentOwner RequestType={Type} OwnerName={Oname} InstrumentNumber={CNum} InstrumentDate={Date} Area={Area+ "م"} RequestStatus={State}/>

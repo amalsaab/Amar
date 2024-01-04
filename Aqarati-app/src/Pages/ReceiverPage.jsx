@@ -35,9 +35,12 @@ const ReceiverPage = () => {
                 
   
                 let card = (
-                  <ReceiverContentOwner
+                  <ReceiverContentTenant
+                  InstrumentNumber={ConNum}
+                  OwnerName={OName}
                   RequestType={Type}
-                  RequestName={State}
+                  RequestName={Num}
+                  FloorNumber={Floor}
                   RequestStatus=""
                 />
                   );
