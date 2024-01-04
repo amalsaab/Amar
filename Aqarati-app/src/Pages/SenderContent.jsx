@@ -83,17 +83,17 @@ const SenderContent = () => {
         <div className="text-center flex gap-3 overflow-auto">
           <button onClick={() => setRequestType("الكل")} className="bg-secondary py-2 min-w-24 rounded-lg ">الكل</button>
           {/* Owner */}
-          <button onClick={() => setRequestType("عقار")} className="bg-secondary py-2 min-w-24 rounded-lg ">عقار</button>
-          <button onClick={() => setRequestType("شقة")} className="bg-secondary py-2 min-w-24 rounded-lg ">شقة</button>
-          <button onClick={() => setRequestType("مستأجر")} className="bg-secondary py-2 min-w-24 rounded-lg ">مستأجر</button>
+          {localStorage.getItem("UserState") === "owner" && <button onClick={() => setRequestType("عقار")} className="bg-secondary py-2 min-w-24 rounded-lg ">عقار</button>}
+          {localStorage.getItem("UserState") === "owner" && <button onClick={() => setRequestType("شقة")} className="bg-secondary py-2 min-w-24 rounded-lg ">شقة</button>}
+          {localStorage.getItem("UserState") === "owner" && <button onClick={() => setRequestType("مستأجر")} className="bg-secondary py-2 min-w-24 rounded-lg ">مستأجر</button>}
           {/* Owner end */}
           {/* Tenant */}
-          <button onClick={() => setRequestType("اصلاح شقة")} className="bg-secondary py-2 min-w-24 rounded-lg ">
+          {localStorage.getItem("UserState") === "tenant" && <button onClick={() => setRequestType("اصلاح شقة")} className="bg-secondary py-2 min-w-24 rounded-lg ">
             اصلاح شقة
-          </button>
-          <button onClick={() => setRequestType("اصلاح عمارة")} className="bg-secondary py-2 min-w-24 rounded-lg ">
+          </button>}
+          {localStorage.getItem("UserState") === "tenant" &&<button onClick={() => setRequestType("اصلاح عمارة")} className="bg-secondary py-2 min-w-24 rounded-lg ">
             اصلاح عمارة
-          </button>
+          </button>}
           {/* Tenant end */}
           <div className="flex items-center">{requestType}</div>
         </div>

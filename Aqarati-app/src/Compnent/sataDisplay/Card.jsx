@@ -33,7 +33,7 @@ function Testing(props, name, age, unit, onButtonClick) {
               {props.Location}
             </p>
           </div>
-          <img width={100} src={Aqar} alt="" />
+          <img width={120} src={Aqar} alt="" />
         </div>
         <div class="p-6">
           <h1 class="block mb-2 font-Arabic text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
