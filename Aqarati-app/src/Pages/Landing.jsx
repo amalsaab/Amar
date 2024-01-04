@@ -235,7 +235,7 @@ function Landing() {
 
       {/* Journy start */}
 
-      <div className=" h-[100vh] bg-[#F6F6F6]">
+      <div className=" bg-[#F6F6F6]">
         <div className="flex  items-end justify-center ">
           <h1 className="text-[3rem]">رحلتك في عقارك</h1>
         </div>
@@ -312,7 +312,7 @@ function Landing() {
       {/* Comman Quatuins start here */}
 
       <div className="flex w-[100vw] h-[90vh]">
-        <div className="flex flex-col w-[60vw] h-[90vh] items-center justify-center">
+        <div className="flex flex-col w-[60vw] h-[90vh] gap-2 items-center justify-center">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-[#BBA98D] text-right w-[30vw]"
@@ -350,7 +350,7 @@ function Landing() {
           </div>
 
           <div className="flex h-[5vh] items-end justify-end w-[29vw]  ">
-            <Link to="/Q">
+            <Link to="/Qu">
               <button className="w-[8vw] h-[4vh] rounded-sm bg-[#ffff] outline outline-[#BBA98D] text-black">
                 عرض المزيد
               </button>

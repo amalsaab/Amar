@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import bgsignup from "../assets/bgSignup1.png";
 import { Link } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../Compnent/dataInput/firebase";
-import { getAuth } from "firebase/auth";
+import {Auth, db } from "../Compnent/dataInput/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import OwnerApartment from "../Pages/OwnerApartment";
+import OwnerApartment from "../pages/OwnerApartment";
 import { useViewPage } from "./store";
-
 
 export default function Login() {
   const [username, setUsername] = useState();
@@ -23,43 +21,38 @@ export default function Login() {
     profile: false,
   });
 
-
-  const nav = useNavigate()
-  const singinbtn = async()=>{
-
+  const nav = useNavigate();
+  const singinbtn = async () => {
     const querySnapshot = await getDocs(collection(db, "UsersInfo"));
     querySnapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
-      let Data = doc.data()
-      let userNameInDB = Data.UserName
-      let PassInDB = Data.Password
-      let State = Data.State
+      let Data = doc.data();
+      let userNameInDB = Data.UserName;
+      let PassInDB = Data.Password;
+      let State = Data.State;
 
-      if (username == userNameInDB && password == PassInDB &&State == "owner" ){
-
+      if (
+        username == userNameInDB &&
+        password == PassInDB &&
+        State == "owner"
+      ) {
         // Nav to the owner page
-        localStorage.setItem("UserName", username)
-        localStorage.setItem("UserState", State)
-        nav('/Owner')  
-      }else if(username == userNameInDB && password == PassInDB &&State == "tenant"){
+        localStorage.setItem("UserName", username);
+        localStorage.setItem("UserState", State);
+        nav("/Owner");
+      } else if (
+        username == userNameInDB &&
+        password == PassInDB &&
+        State == "tenant"
+      ) {
         // Nav to the tenant page
-        localStorage.setItem("UserName", username)
-        localStorage.setItem("UserState", State)
-        nav('/Owner')
-        setNamePage('OwnerApartment')
-
-
-
+        localStorage.setItem("UserName", username);
+        localStorage.setItem("UserState", State);
+        nav("/Owner");
+        setNamePage("OwnerApartment");
       }
-
     });
-
-  
-
-
-
-  }
-
+  };
 
   return (
     <>
@@ -97,7 +90,7 @@ export default function Login() {
                   </svg>
                   <input
                     value={username}
-                    onChange={e => setUsername(e.target.value)}
+                    onChange={(e) => setUsername(e.target.value)}
                     class="pl-2 outline-none border-none py-2"
                     type="text"
                     placeholder="اسم المستخدم"
@@ -119,7 +112,7 @@ export default function Login() {
                   </svg>
                   <input
                     value={password}
-                    onChange={e => setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)}
                     class="pl-2 outline-none border-none py-2"
                     type="password"
                     placeholder="كلمة السر"
@@ -127,7 +120,10 @@ export default function Login() {
                 </div>
 
                 <div className="flex justify-center">
-                  <button onClick={singinbtn} class="block w-44 bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2">
+                  <button
+                    onClick={singinbtn}
+                    class="block w-44 bg-primary mt-4 py-2 rounded-2xl text-black font-semibold mb-2"
+                  >
                     تسجيل الدخول
                   </button>
                 </div>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import bgsignup from "../assets/bgSignup1.png";
 import { useNavigate } from "react-router-dom";
-import { getAuth , createUserWithEmailAndPassword} from "firebase/auth";
-import { db } from "../Compnent/dataInput/firebase";
+import {Auth, db } from "../Compnent/dataInput/firebase.js";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { collection, addDoc } from "firebase/firestore"; 
 
 export default function Signup() {
@@ -35,8 +35,7 @@ export default function Signup() {
       setMessage("كلمة السر غير مطابقة");
     } else if (!checkBox.checked) {
       setMessage("الرجاء الموافقة على الشروط");
-	  const auth = getAuth();
-	  createUserWithEmailAndPassword(auth, email, password)
+	  createUserWithEmailAndPassword(Auth, email, password)
 				.then((userCredential) => {
 	  
 				  })

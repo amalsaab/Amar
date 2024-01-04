@@ -1,11 +1,11 @@
 import "./App.css";
-import Landing from "../src/Pages/Landing";
+import Landing from "../src/pages/Landing";
 import { Routes, Route } from "react-router-dom";
 import Qu from "../src/pages/Qu";
-import Signup from "./Pages/Signup";
+import Signup from "../src/pages/Signup";
 import Card from "../src/Compnent/sataDisplay/Card";
-import Owner from "../src/Pages/Owner";
-import OwnerApartment from "../src/Pages/OwnerApartment";
+import Owner from "../src/pages/Owner";
+import OwnerApartment from "../src/pages/OwnerApartment";
 import BottomNavigation from "../src/Compnent/navigation/BottomNavigation";
 import Login from "../src/pages/Login";
 import ApartmentHistory from "../src/pages/ApartmentHistory";
@@ -15,9 +15,9 @@ import RequestAddBuilding from "../src/pages/RequestAddBuilding";
 import AddTenant from "../src/pages/AddTenant";
 import AddApartment from "../src/pages/AddApartment";
 import Profile from "../src/pages/Profile";
-import PaymentPage from "./Pages/PaymentPage";
-import ShowRequest from "./Pages/ShowRequest";
-import TenantRentPayment from "./Pages/TenantRentPayment";
+import PaymentPage from "../src/pages/PaymentPage";
+import ShowRequest from "../src/pages/ShowRequest";
+import TenantRentPayment from "./pages/TenantRentPayment";
 function App() {
   return (
     <div className="font-Arabic">
