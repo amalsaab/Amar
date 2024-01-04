@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {Auth, db } from "../Compnent/dataInput/firebase";
+// import { Link } from "react-router-dom";
+import { db } from "../Compnent/dataInput/firebase";
 import { useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
-import TableInfo from "./TableInfo";
+// import TableInfo from "./TableInfo";
 import Aqar from "../.../../assets/aqar.png";
 import PaymentTotal from "./PaymentTotal";
 

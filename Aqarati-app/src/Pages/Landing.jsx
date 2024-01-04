@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect} from "react";
 import bg1 from "../assets/bg1.png";
 import line from "../assets/line.png";
 import step1 from "../assets/step1.png";

@@ -1,7 +1,7 @@
 import React from "react";
 import Aqar from "../../assets/aqar.png";
 import { useViewPage } from "../../pages/store.js";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function ApartmentCard(props) {
   const navigate = useNavigate();
