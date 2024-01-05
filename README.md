@@ -47,10 +47,10 @@
   npm i -D daisyui@latest
   ```
 
-  - [tailwind](https://tailwindcss.com/docs/guides/vite)
-  - [daisyui](https://daisyui.com/)
+  - [Tailwind](https://tailwindcss.com/docs/guides/vite)
+  - [Daisyui](https://daisyui.com/)
   - [Zustand](https://zustand-demo.pmnd.rs/)
-  - 
+  - [Firebase](https://firebase.google.com/)
 
 # ملف_Figma 
 - الرابط: [Click me](https://www.figma.com/file/WeNImQ4wTS6Zwgfh8vl2x6/Untitled?type=design&node-id=0%3A1&mode=design&t=mGMHEtR51ik0iYO0-1)
@@ -69,4 +69,5 @@
 ![screencapture-localhost-5175-ViewRequest-2024-01-05-21_49_59](https://github.com/amalsaab/Amar/assets/103143696/1f0f1c8b-39aa-4165-ba55-4ffab2b24758)
 ![screencapture-localhost-5175-ViewRequest-2024-01-05-21_50_18](https://github.com/amalsaab/Amar/assets/103143696/c22a3168-5027-4dc1-b161-479794a7fb65)
 
+![screencapture-localhost-5175-Profile-2024-01-05-21_50_30](https://github.com/amalsaab/Amar/assets/103143696/804871ec-3163-4c1e-ab78-d4ad1ffb440e)
 
