@@ -47,9 +47,9 @@
   npm i -D daisyui@latest
   ```
 
-  - https://tailwindcss.com/docs/guides/vite [tailwind](https://tailwindcss.com/docs/guides/vite)
-  - https://daisyui.com/ [daisyui](https://daisyui.com/)
+  - [tailwind](https://tailwindcss.com/docs/guides/vite)
+  - [daisyui](https://daisyui.com/)
 
 # ملف_Figma 
-- الرابط: https://www.figma.com/file/WeNImQ4wTS6Zwgfh8vl2x6/Untitled?type=design&node-id=0%3A1&mode=design&t=mGMHEtR51ik0iYO0-1
+- الرابط: [Click me](https://www.figma.com/file/WeNImQ4wTS6Zwgfh8vl2x6/Untitled?type=design&node-id=0%3A1&mode=design&t=mGMHEtR51ik0iYO0-1)
 
