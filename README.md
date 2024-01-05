@@ -55,3 +55,18 @@
 # ملف_Figma 
 - الرابط: [Click me](https://www.figma.com/file/WeNImQ4wTS6Zwgfh8vl2x6/Untitled?type=design&node-id=0%3A1&mode=design&t=mGMHEtR51ik0iYO0-1)
 
+
+# صور من الموقع
+
+![screencapture-localhost-5173-2024-01-05-21_45_15](https://github.com/amalsaab/Amar/assets/103143696/cade2368-f8a9-40c8-9181-03c209b6f956)
+
+![screencapture-localhost-5173-Qu-2024-01-05-21_46_00](https://github.com/amalsaab/Amar/assets/103143696/ae193489-49ff-4002-8316-c2d2102dbd23)
+![screencapture-localhost-5173-login-2024-01-05-21_46_24](https://github.com/amalsaab/Amar/assets/103143696/854a5fb0-f446-4113-85d8-bdf76a724a33)
+![screencapture-localhost-5173-signup-2024-01-05-21_46_56](https://github.com/amalsaab/Amar/assets/103143696/9b766719-61c7-4a6b-bba5-a38cebb2198e)
+
+![screencapture-localhost-5175-OwnerApartment-2024-01-05-21_49_11](https://github.com/amalsaab/Amar/assets/103143696/853d8018-6a48-4cfd-88f1-0dd85a67a936)
+![screencapture-localhost-5175-RentPayments-2024-01-05-21_49_45](https://github.com/amalsaab/Amar/assets/103143696/5ecf436f-566a-4241-b570-6b1c779e90b4)
+![screencapture-localhost-5175-ViewRequest-2024-01-05-21_49_59](https://github.com/amalsaab/Amar/assets/103143696/1f0f1c8b-39aa-4165-ba55-4ffab2b24758)
+![screencapture-localhost-5175-ViewRequest-2024-01-05-21_50_18](https://github.com/amalsaab/Amar/assets/103143696/c22a3168-5027-4dc1-b161-479794a7fb65)
+
+
