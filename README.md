@@ -83,5 +83,5 @@
 
 
 سلمان المطيري
-[LinkedIn]([www.linkedin.com/in/salmanalmutairidev](https://www.linkedin.com/in/salman-almutairi-4aa6431bb/)https://www.linkedin.com/in/salman-almutairi-4aa6431bb/)
+[LinkedIn](https://www.linkedin.com/in/salmanalmutairidev)
 [GitHub](https://github.com/SALMAN-00 )
