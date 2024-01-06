@@ -71,3 +71,13 @@
 
 ![screencapture-localhost-5175-Profile-2024-01-05-21_50_30](https://github.com/amalsaab/Amar/assets/103143696/804871ec-3163-4c1e-ab78-d4ad1ffb440e)
 
+# اعضاء الفريق
+خالد العبدلي 
+LinkedIn: [https://www.linkedin.com/in/khalid-fahad-alanzi-190949246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app]
+GitHub: [https://github.com/7xo9]
+عبدالله الصعب
+LinkedIn: [https://www.linkedin.com/in/abdullah-alsaab-computerscience?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app]
+GitHub: [amalsaab](https://github.com/amalsaab)
+سلمان المطيري
+LinkedIn: [www.linkedin.com/in/salmanalmutairidev]
+GitHub: [https://github.com/SALMAN-00 ](https://github.com/SALMAN-00)https://github.com/SALMAN-00
