@@ -75,9 +75,13 @@
 خالد العبدلي 
 LinkedIn: [https://www.linkedin.com/in/khalid-fahad-alanzi-190949246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app]
 GitHub: [https://github.com/7xo9]
+
+
 عبدالله الصعب
 LinkedIn: [https://www.linkedin.com/in/abdullah-alsaab-computerscience?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app]
-GitHub: [amalsaab](https://github.com/amalsaab)
+GitHub: [https://github.com/amalsaab]
+
+
 سلمان المطيري
 LinkedIn: [www.linkedin.com/in/salmanalmutairidev]
-GitHub: [https://github.com/SALMAN-00 ](https://github.com/SALMAN-00)https://github.com/SALMAN-00
+GitHub: [https://github.com/SALMAN-00 ]
